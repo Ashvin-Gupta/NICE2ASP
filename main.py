@@ -43,52 +43,52 @@ def main():
     llmExtractor = LLMInferencer(config['llm_params']['model'], config['llm_params']['temperature'])
     fileManager = FileManager()
 
-    if config['llm_params']['constant_inference_iterations'] > 0:
+    # if config['llm_params']['constant_inference_iterations'] > 0:
 
     
-    # Constant extraction
-        llmExtractor.run_constant_inference(
-            config['input_files']['constant_prompt'],
-            config['input_files']['problem_text'],
-            str(output_files['constant_response']),
-            config['llm_params']['constant_inference_iterations']
-        )
-        fileManager.extract_unique_constants(
-            str(output_files['constant_response']),
-            str(output_files['processed_constants'])
-        )
+    # # Constant extraction
+    #     llmExtractor.run_constant_inference(
+    #         config['input_files']['constant_prompt'],
+    #         config['input_files']['problem_text'],
+    #         str(output_files['constant_response']),
+    #         config['llm_params']['constant_inference_iterations']
+    #     )
+    #     fileManager.extract_unique_constants(
+    #         str(output_files['constant_response']),
+    #         str(output_files['processed_constants'])
+    #     )
 
-        # Extracting the predicates
-        llmExtractor.run_predicate_inference(
-            config['input_files']['predicate_prompt'],
-            config['input_files']['problem_text'],
-            str(output_files['processed_constants']),
-            str(output_files['predicate_response']),
-            config['llm_params']['predicate_inference_iterations']
-        )
-        fileManager.extract_unique_predicates(
-            str(output_files['predicate_response']),
-            str(output_files['processed_predicates'])
-        )
+    #     # Extracting the predicates
+    #     llmExtractor.run_predicate_inference(
+    #         config['input_files']['predicate_prompt'],
+    #         config['input_files']['problem_text'],
+    #         str(output_files['processed_constants']),
+    #         str(output_files['predicate_response']),
+    #         config['llm_params']['predicate_inference_iterations']
+    #     )
+    #     fileManager.extract_unique_predicates(
+    #         str(output_files['predicate_response']),
+    #         str(output_files['processed_predicates'])
+    #     )
 
-        # Rule generation
-        llmExtractor.run_rulegen_inference(
-            config['input_files']['rule_generation_prompt'],
-            config['input_files']['problem_text'],
-            str(output_files['processed_constants']),
-            str(output_files['processed_predicates']),
-            str(output_files['rulegen_response']),
-            config['llm_params']['rule_generation_iterations']
-        )
+    #     # Rule generation
+    #     llmExtractor.run_rulegen_inference(
+    #         config['input_files']['rule_generation_prompt'],
+    #         config['input_files']['problem_text'],
+    #         str(output_files['processed_constants']),
+    #         str(output_files['processed_predicates']),
+    #         str(output_files['rulegen_response']),
+    #         config['llm_params']['rule_generation_iterations']
+    #     )
 
-    else:
-        print("Running zero shot inference")
-        llmExtractor.run_constant_inference(
-            config['input_files']['zero_shot'],
-            config['input_files']['problem_text'],
-            str(output_files['zero_shot_response']),
-            1
-        )
+    # else:
+    #     print("Running zero shot inference")
+    #     llmExtractor.run_constant_inference(
+    #         config['input_files']['zero_shot'],
+    #         config['input_files']['problem_text'],
+    #         str(output_files['zero_shot_response']),
+    #         1
+    #     )
     print("Starting graph analysis")
     # Graph analysis
     graph_gt = ASPGraphCreator.create_program_graph(config['input_files']['ground_truth'])
@@ -100,7 +100,7 @@ def main():
         graph_gt, 
         [graph_generated], 
         str(output_files['graph_metrics']), 
-        ['zero_shot_response'],
+        ['rulegen_response'],
         config=config
     )
 

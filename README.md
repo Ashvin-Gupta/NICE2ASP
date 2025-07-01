@@ -104,9 +104,9 @@ All outputs are saved in a subdirectory under the specified `output_dir` and `ve
 - `config.yaml`: Copy of the configuration used for the run
 
 #### Example: `graph_metrics.csv`
-| experiment_name | model | iterations constants | iterations predicates | iterations rulegen| temperature| wl_similarity | emd_similarity | adjacency similarity| nodal accuracy |
-|-----------------|-------|---------------|------------------------|----------|-----|
-| output_files/32 | claude-3-7-sonnet-20250219 | 1 | 1 | 1 | 0.19408 | 0.79429 | 0.79234 | 0.66667 |
+| experiment_name | model | iterations_constants | iterations_predicates | iterations_rulegen | temperature | wl_similarity | emd_similarity | adjacency_similarity | nodal_accuracy |
+|-----------------|-------|---------------------|---------------------|-------------------|-------------|---------------|----------------|---------------------|----------------|
+| output_files/32 | claude-3-7-sonnet-20250219 | 1 | 1 | 1 | 0.25 | 0.19408 | 0.79429 | 0.79234 | 0.66667 |
 
 #### Example: `rulegen_raw.lp`
 ```prolog

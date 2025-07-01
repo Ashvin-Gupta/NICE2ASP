@@ -445,16 +445,9 @@ class GraphAnalyzer:
                     metrics['model'] = config['llm_params']['model']
                     metrics['iterations_constants'] = config['llm_params']['constant_inference_iterations']
                     metrics['iterations_predicates'] = config['llm_params']['predicate_inference_iterations']
-                    metrics['iterations_rulegen2'] = config['llm_params']['rule_generation_iterations']
+                    metrics['iterations_rulegen'] = config['llm_params']['rule_generation_iterations']
                     metrics['temperature'] = config['llm_params']['temperature']
                     
-                    # Set redo_coverage based on file name
-                    if gen_names[i] == 'final_rules':
-                        metrics['redo_coverage'] = 'yes'
-                    elif gen_names[i] == 'rulegen2':
-                        metrics['redo_coverage'] = 'no'
-                    else:
-                        metrics['redo_coverage'] = 'unknown'
                 
                 # Add file identifiers
                 metrics['file_name'] = gen_names[i]
@@ -469,20 +462,16 @@ class GraphAnalyzer:
                 
                 # Compute EMD similarity
                 emd_sim = self.compute_emd_similarity(embeddings_gt, embeddings_gen)
-                metrics['emd_adjusted_similarity'] = round(emd_sim[0], 5)
-                metrics['emd_base_similarity'] = round(emd_sim[1], 5)
-                metrics['emd_size_penalty'] = round(emd_sim[2], 5)
+                metrics['emd_similarity'] = round(emd_sim[0], 5)
                 
                 # Structure-aware spectral similarity
                 adj_sim = self.compute_semantic_adjacency_similarity(G_gt, G_gen)
-                metrics['adjacency_adjusted_similarity'] = round(adj_sim[0], 5)
-                metrics['adjacency_base_similarity'] = round(adj_sim[1], 5)
-                metrics['adjacency_structure_penalty'] = round(adj_sim[2], 5)
+                metrics['adjacency_similarity'] = round(adj_sim[0], 5)
             
                 
                 # Graph accuracy
                 acc_metrics = self.calculate_graph_accuracy(G_gt, G_gen)
-                metrics['accuracy'] = round(acc_metrics['accuracy'], 5)
+                metrics['nodal_accuracy'] = round(acc_metrics['accuracy'], 5)
 
                 # Add timestamp
                 metrics['timestamp'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -500,7 +489,7 @@ class GraphAnalyzer:
                 writer.writerows(all_metrics)
             
             # Also append to master results table
-            master_results_file = "results/master_results2.csv"
+            master_results_file = "results/master_results.csv"
             os.makedirs(os.path.dirname(master_results_file), exist_ok=True)
             
             # Check if master file exists

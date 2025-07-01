@@ -1,0 +1,113 @@
+
+
+---------------Iteration 1----------------
+
+1.3.1 
+offer("sputum_cytology") :- have("suspected_lung_cancer"), have("centrally_placed_nodules_or_masses"), (not offer("bronchoscopy") ; not offer("invasive_tests")).
+
+1.3.2 
+offer("contrast-enhanced_chest_ct") :- have("known_or_suspected_lung_cancer").
+
+1.3.3 
+:- have("lung_cancer"), offer("ct_alone"), not have("reliable_assessment").
+
+1.3.4 
+offer("pet-ct") :- have("lung_cancer"), have("treatment_with_curative_intent").
+
+1.3.5 
+offer("rapid_access_to_pet-ct") :- have("lung_cancer"), have("eligible").
+
+1.3.6 
+:- have("nsclc"), offer("mri_for_t_stage").
+
+1.3.7 
+offer("mri") :- have("superior_sulcus_tumours").
+
+1.3.8 
+offer("ebus-tbna") :- have("paratracheal_and_peri-bronchial_intra-parenchymal_lung_lesions").
+
+1.3.9 
+offer("ebus_and/or_eus") :- have("lung_cancer").
+
+1.3.10 
+offer("audit_of_ebus-tbna_and_eus-fna") :- have("lung_cancer").
+
+1.3.11 
+offer("adequate_samples") :- have("lung_cancer").
+
+1.3.12 
+offer("egfr-tk_mutation_testing") :- have("nsclc").
+
+1.3.13 
+1 {offer("investigations_with_most_information")}.
+1 {offer("investigations_with_least_risk")} :- have("lung_cancer").
+
+1.3.14 
+offer("contrast-enhanced_ct") :- have("lung_cancer"), before("biopsy_procedure").
+
+1.3.15 
+offer("image-guided_biopsy") :- have("peripheral_lung_lesions"), have("treatment_planned").
+
+1.3.16 
+offer("biopsy_of_enlarged_intrathoracic_nodes") :- have("lung_cancer"), have("enlarged_intrathoracic_nodes").
+
+1.3.17 
+offer("flexible_bronchoscopy") :- have("central_lesions"), not have("nodal_staging_influences_treatment").
+
+1.3.18 
+offer("pet-ct") :- have("lung_cancer"), have("low_probability_of_nodal_malignancy").
+
+1.3.19 
+offer("pet-ct") :- have("lung_cancer"), have("enlarged_intrathoracic_lymph_nodes").
+
+1.3.20 
+offer("ebus-tbna_and/or_eus-fna") :- have("lung_cancer"), have("pet-ct_positive_or_enlarged_intrathoracic_nodes").
+
+1.3.21 
+offer("surgical_mediastinal_staging") :- have("lung_cancer"), have("negative_ebus-tbna_or_eus-fna"), have("high_clinical_suspicion_of_nodal_malignancy").
+
+1.3.22 
+offer("biopsy_or_further_imaging") :- have("lung_cancer"), have("isolated_distant_metastases").
+
+1.3.23 
+:- have("nsclc"), have("clinical_stage_i"), not have("neurological_symptoms"), offer("dedicated_brain_imaging").
+
+1.3.24 
+offer("contrast-enhanced_brain_ct") :- have("nsclc"), have("clinical_stage_ii").
+
+1.3.25 
+offer("contrast-enhanced_brain_mri") :- have("nsclc"), have("clinical_stage_iii").
+
+1.3.26 
+offer("ct_of_the_head") :- have("clinical_features_suggestive_of_intracranial_pathology").
+
+1.3.27 
+offer("x-ray") :- have("localised_signs_or_symptoms_of_bone_metastasis").
+
+1.3.28 
+:- have("lung_cancer"), offer("bone_scintigraphy"), not have("pet-ct_shows_bone_metastases").
+
+1.3.29 
+offer("treatment_without_undue_delay") :- have("lung_cancer"), have("radical_treatment_or_chemotherapy").
+
+1.3.30 
+refer("lung_cancer_multidisciplinary_team") :- have("suspected_lung_cancer").
+
+1.3.31 
+refer("lung_cancer_multidisciplinary_team") :- have("working_diagnosis_of_lung_cancer").
+
+1.3.32 
+offer("fast-track_lung_cancer_clinics") :- have("suspected_lung_cancer").
+
+1.3.33 
+offer("lung_cancer_clinical_nurse_specialists") :- have("lung_cancer").
+
+1.1.1 
+refer("suspected_cancer_pathway") :- have("chest_x-ray_findings_suggestive_of_lung_cancer") ; (age(X), X >= 40, have("unexplained_haemoptysis")).
+
+1.1.2 
+offer("urgent_chest_x-ray") :- (age(X), X >= 40), (have("cough") ; have("fatigue") ; have("shortness_of_breath") ; have("chest_pain") ; have("weight_loss") ; have("appetite_loss")).
+
+1.1.3 
+offer("urgent_chest_x-ray") :- (age(X), X >= 40), (have("persistent_or_recurrent_chest_infection") ; have("finger_clubbing") ; have("supraclavicular_lymphadenopathy") ; have("persistent_cervical_lymphadenopathy")).
+

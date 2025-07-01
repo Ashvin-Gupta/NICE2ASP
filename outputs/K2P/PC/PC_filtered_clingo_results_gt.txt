@@ -1,0 +1,294 @@
+
+
+===================================================== Patient 1 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmp_s1x0bvl.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 2
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 3
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+=== Patient 2 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmpt9wj9aj1.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") consider("MRI/MRCP") assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 2
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") consider("MRI/MRCP") assess("additional_symptoms") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 3
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") consider("MRI/MRCP") assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 4
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") consider("MRI/MRCP") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 5
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") consider("MRI/MRCP") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 6
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") consider("MRI/MRCP") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+=== Patient 3 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmp61932m5c.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings("cystic_lesions","head_of_pancreas") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 2
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings("cystic_lesions","head_of_pancreas") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 3
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings("cystic_lesions","head_of_pancreas") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 4
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings("cystic_lesions","head_of_pancreas") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 5
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings("cystic_lesions","head_of_pancreas") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 6
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings("cystic_lesions","head_of_pancreas") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+=== Patient 4 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmpz92e7t0x.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct","pelvis") offer("pancreatic_protocol_ct","abdomen") offer("pancreatic_protocol_ct","chest") ask("family_history") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+=== Patient 5 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmptfj5a2nl.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offer("EUS_with_tissue") offered("EUS_with_tissue") offered("pancreatic_protocol_ct") ask("family_history")
+
+Answer: 2
+offer("pancreatic_protocol_ct") offer("EUS_with_tissue") offered("EUS_with_tissue") offered("pancreatic_protocol_ct") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+=== Patient 6 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmptmpknv6q.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 2
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 3
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+=== Patient 7 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmpwhqz18db.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct","pelvis") offer("pancreatic_protocol_ct","abdomen") offer("pancreatic_protocol_ct","chest") ask("family_history") refer("suspected_cancer_pathway",cancer("pancreas")) assess("additional_symptoms")
+
+=== Patient 8 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmps7hn07d7.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 2
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 3
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+=== Patient 9 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmppvyl01tm.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 2
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 3
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+=== Patient 10 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmpelxql0lx.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 2
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 3
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+=== Patient 11 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmpuvipi2t4.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("MRI/MRCP") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 2
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("MRI/MRCP") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 3
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("MRI/MRCP") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+=== Patient 12 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmppkabf4tw.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 2
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 3
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+=== Patient 13 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmp38w_3gmo.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 2
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") assess("additional_symptoms") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 3
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 4
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 5
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 6
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+=== Patient 14 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmpmz9t9do2.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 2
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 3
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 4
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 5
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 6
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+=== Patient 15 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmp5xdsflxq.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 2
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 3
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 4
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 5
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 6
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("ultrasound") consider("CT_scan") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+=== Patient 16 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmpsrgnuf87.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offer("draining_bile_duct") offered("pancreatic_protocol_ct") offered("draining_bile_duct") findings_from_procedure("EUS_with_tissue","no_tissue_diagnosis") ask("family_history") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 2
+offer("pancreatic_protocol_ct") offer("draining_bile_duct") offered("pancreatic_protocol_ct") offered("draining_bile_duct") findings_from_procedure("EUS_with_tissue","no_tissue_diagnosis") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 3
+offer("pancreatic_protocol_ct") offer("draining_bile_duct") offered("pancreatic_protocol_ct") offered("draining_bile_duct") findings_from_procedure("EUS_with_tissue","no_tissue_diagnosis") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+=== Patient 17 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmp5ev78rr6.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") refer("resection") ask("family_history")
+
+=== Patient 18 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmpxuvffimp.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 2
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") assess("additional_symptoms") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 3
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+
+Answer: 4
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 5
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 6
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+=== Patient 19 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmpunghzg20.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("MRI/MRCP") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 2
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("MRI/MRCP") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 3
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") ask("family_history") consider("MRI/MRCP") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+=== Patient 20 ===
+Answer: clingo version 5.4.1
+Reading from /tmp/tmp9qau65st.lp Solving...
+
+Answer: 1
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings("cystic_lesions","head_of_pancreas") ask("family_history") offered("EUS_with_tissue") offer("EUS_with_tissue")
+
+Answer: 2
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings("cystic_lesions","head_of_pancreas") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT")
+
+Answer: 3
+offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings("cystic_lesions","head_of_pancreas") ask("family_history") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")

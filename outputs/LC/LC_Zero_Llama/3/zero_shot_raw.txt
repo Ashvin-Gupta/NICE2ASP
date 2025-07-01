@@ -1,0 +1,65 @@
+
+
+---------------Iteration 1----------------
+
+1. 
+investigation(sputum_cytology, Person) :- suspected_lung_cancer(Person), centrally_placed_nodules_or_masses(Person), decline_or_cannot_tolerate_bronchoscopy(Person).
+investigation(contrast_enhanced_chest_ct_scan, Person) :- known_or_suspected_lung_cancer(Person).
+investigation(contrast_enhanced_chest_ct_scan, Person) :- known_or_suspected_lung_cancer(Person), not renal_impairment(Person).
+
+2. 
+mediastinal_and_chest_wall_invasion_assessment(ct_scan, Person) :- assessing_mediastinal_and_chest_wall_invasion(Person).
+mediastinal_and_chest_wall_invasion_assessment(ultrasound, Person) :- assessing_mediastinal_and_chest_wall_invasion(Person), doubt_after_ct_scan(Person).
+mediastinal_and_chest_wall_invasion_assessment(surgical_assessment, Person) :- assessing_mediastinal_and_chest_wall_invasion(Person), no_contraindications_to_resection(Person).
+
+3. 
+investigation(pet_ct_scan, Person) :- lung_cancer(Person), potentially_treatable_with_curative_intent(Person).
+rapid_access_to_pet_ct_scanning(Person) :- eligible_for_pet_ct_scanning(Person).
+
+4. 
+investigation(mri, Person) :- superior_sulcus_tumour(Person).
+not investigation(mri, Person) :- non_small_cell_lung_cancer(Person), primary_tumour_staging(Person).
+
+5. 
+investigation(endobronchial_ultrasound_guided_transbronchial_needle_aspiration, Person) :- paratracheal_and_peri_bronchial_intra_parenchymal_lung_lesions(Person).
+centre_with_ebus_and_or_eus(Person) :- cancer_alliance(Person).
+
+6. 
+audit(local_test_performance, ebus_tbna_and_eus_fna, Person) :- cancer_alliance(Person).
+sample_adequacy(adequate, Person) :- taking_samples(Person), pathological_diagnosis(Person).
+
+7. 
+sequence_of_investigations(contrast_enhanced_ct_of_chest_liver_adrenals_and_lower_neck, Person) :- before_biopsy_procedure(Person).
+sequence_of_investigations(investigation_giving_most_information, Person) :- diagnosis_and_staging(Person), least_risk_to_person(Person).
+
+8. 
+peripheral_primary_tumour(image_guided_biopsy, Person) :- peripheral_lung_lesions(Person), treatment_planned_on_basis_of_test(Person).
+peripheral_primary_tumour(biopsy_of_enlarged_intrathoracic_nodes, Person) :- enlarged_intrathoracic_nodes(Person), determination_of_nodal_stage_affects_treatment(Person).
+
+9. 
+central_primary_tumour(flexible_bronchoscopy, Person) :- central_lesions_on_ct(Person), nodal_staging_does_not_influence_treatment(Person).
+
+10. 
+intrathoracic_lymph_node_assessment(pet_ct, Person) :- low_probability_of_nodal_malignancy(Person), potentially_treatable_with_curative_intent(Person).
+intrathoracic_lymph_node_assessment(pet_ct_then_ebus_tbna_and_or_eus_fna, Person) :- enlarged_intrathoracic_lymph_nodes(Person), potentially_treatable_with_curative_intent(Person).
+intrathoracic_lymph_node_assessment(ebus_tbna_and_or_eus_fna, Person) :- pet_ct_positive_or_enlarged_intrathoracic_nodes(Person), nodal_status_would_affect_treatment_plan(Person).
+
+11. 
+further_staging(biopsy_or_further_imaging, Person) :- isolated_distant_metastases_or_synchronous_tumours(Person), treatment_with_curative_intent(Person).
+further_staging(contrast_enhanced_brain_ct, Person) :- clinical_stage_ii_nscl(Person), treatment_with_curative_intent(Person).
+further_staging(contrast_enhanced_brain_mri, Person) :- stage_iii_nscl(Person), treatment_with_curative_intent(Person).
+
+12. 
+multidisciplinary_teams(referral_to_lung_cancer_multidisciplinary_team, Person) :- suspected_diagnosis_of_lung_cancer(Person).
+multidisciplinary_teams(discussion_at_lung_cancer_multidisciplinary_team_meeting, Person) :- working_diagnosis_of_lung_cancer(Person).
+
+13. 
+fast_track_lung_clinics(provision_of_fast_track_lung_cancer_clinics, Person) :- suspected_lung_cancer(Person).
+
+14. 
+cancer_clinical_nurse_specialists(provision_of_lung_cancer_clinical_nurse_specialists, Person) :- cancer_units_or_centres(Person).
+
+15. 
+lung_cancer(referral_using_suspected_cancer_pathway, Person) :- chest_x_ray_findings_suggest_lung_cancer(Person).
+lung_cancer(urgent_chest_x_ray, Person) :- aged_40_and_over(Person), unexplained_symptoms(Person).
+

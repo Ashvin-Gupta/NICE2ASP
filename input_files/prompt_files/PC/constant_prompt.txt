@@ -1,0 +1,69 @@
+You are an expert in classifying constants from text.
+Given a problem, extract all different constants and their categories in the form "category: constant_1; constant_2; ...; constant_n". Here, the format of each constant is turned into either an integer or a string surrounded by double quotes, e.g., "some name".
+Do this only for Problem 6 where I have given you the categories which do not need changing and some information about what should be included in them.
+Start each reply with Constants:
+
+Problem 1:
+[People without jaundice who have pancreatic abnormalities on imaging] Offer a pancreatic protocol CT scan to people with pancreatic abnormalities but no jaundice. If the diagnosis is still unclear offer FDG-PET/CT and/or EUS with EUS-guided tissue sampling.
+
+Constants:
+Imaging: "pancreatic protocol CT".
+Finding_of_pancreas: "pancreatic abnormalities".
+Symptoms: "jaundice".
+Procedures: "FDG-PET/CT"; "EUS"; "EUS with tissue".
+General_findings: "unclear diagnosis".
+
+Problem 2:
+[People with obstructive jaundice] Take a biliary brushing for cytology if: endoscopic retrograde cholangiopancreatography (ERCP) is being used to relieve the biliary obstruction and there is no tissue diagnosis.
+
+Constants:
+Procedures: "bilary brushing"; "ERCP".
+Understanding_of_diagnosis: "no tissue diagnosis".
+Symptoms: "bilary obstruction", "obstructive jaundice".
+
+Problem 3:
+[People with inherited high risk of pancreatic cancer] Offer surveillance for pancreatic cancer to people with:
+• hereditary pancreatitis and a PRSS1 mutation
+• BRCA1 or BRCA2, and one or more firstdegree relatives with pancreatic cancer
+
+Constants:
+Disease: "pancreatic cancer".
+Management: "surveillance".
+Genetic_disease: "hereditary pancreatitis", "PRSS1", "BRCA1", "BRCA2".
+Information_about_patient: "firstdegree relatives with pancreatic cancer", "inherited high risk".
+
+Problem 4:
+[People with inherited high risk of pancreatic cancer] Do not offer EUS to detect pancreatic cancer in people with hereditary pancreatitis.
+
+Constants:
+Procedures: "EUS".
+Genetic_disease: "hereditary pancreatitis".
+Disease: "pancreatic cancer".
+Information_about_patient: "inherited high risk".
+
+
+Problem 5:
+Refer people using a suspected cancer pathway referral for pancreatic cancer if they are aged 40 and over and have jaundice.
+
+Constants:
+Disease: "pancreatic cancer".
+Symptoms: "jaundice".
+Information_about_patient: "40".
+Management: "suspected cancer pathway referral".
+
+Problem 6:
+{problem_text}
+
+Disease: Concepts describing different diseases
+Symptoms: Concepts describing symptoms or conditions
+Imaging: Concepts related to medical imaging 
+Procedures: Concepts related to medical Procedures
+Finding_of_pancreas: Concpets related to information regarding the pancreas
+Genetic_disease: Concepts related to hereditary or genetic condtions
+Managements: Concepts related to management of a cancer
+Treatments: Concpets related to treating a disease
+Anatomical_structures: Anatomical structures of the body
+Information_about_patient: Concpets related to demographics of the patient 
+General_findings: Concepts related to how clear clinician is on the diagnosis
+
+

@@ -1,0 +1,12 @@
+Constants:
+Anatomical_structures: "abdomen"; "chest"; "head of the pancreas"; "liver"; "pelvis".
+Disease: "pancreatic cancer".
+Finding_of_pancreas: "cystic lesions in the head of the pancreas"; "enhancing solid component in the cyst"; "main pancreatic duct that is 10 mm diameter or larger"; "pancreatic abnormalities"; "pancreatic cysts".
+Genetic_disease: "BRCA1"; "BRCA2"; "CDKN2A"; "Lynch syndrome"; "MLH1"; "MSH2"; "MSH6"; "PALB2"; "PMS2"; "PRSS1"; "Peutz–Jeghers syndrome"; "hereditary pancreatitis".
+Imaging: "MRI/MRCP"; "magnetic resonance cholangiopancreatography"; "pancreatic protocol CT scan"; "ultrasound scan".
+Information_about_patient: "18"; "2 or more first-degree relatives with pancreatic cancer, across 2 or more generations"; "40"; "60"; "first-degree relatives with pancreatic cancer"; "inherited high risk".
+Management: "surveillance"; "suspected cancer pathway referral"; "urgent investigation"; "urgent, direct access CT scan".
+Procedures: "ERCP"; "EUS"; "EUS-guided tissue sampling"; "FDG-PET/CT"; "biliary brushing"; "carcinoembryonic antigen assay"; "cytology"; "draining the bile duct"; "endoscopic retrograde cholangiopancreatography"; "endoscopic ultrasound"; "fine-needle aspiration"; "fluorodeoxyglucose-positron emission tomography/CT"; "laparoscopic ultrasound"; "laparoscopy"; "resection".
+Symptoms: "abdominal pain"; "appetite loss"; "back pain"; "biliary obstruction"; "constipation"; "diarrhoea"; "jaundice"; "nausea"; "new-onset diabetes"; "obstructive jaundice"; "vomiting"; "weight loss".
+Treatments: "cancer treatment"; "radiotherapy"; "resectional surgery"; "surgery"; "systemic therapy".
+Understanding_of_diagnosis: "likelihood of malignancy"; "localised disease"; "no tissue diagnosis"; "suspected liver metastases"; "suspected small-volume peritoneal and/or liver metastases"; "unclear diagnosis".

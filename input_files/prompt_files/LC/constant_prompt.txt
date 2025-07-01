@@ -1,0 +1,84 @@
+You are an expert in classifying constants from text.
+Given a problem, extract all different constants and their categories in the form "category: constant_1; constant_2; ...; constant_n". Here, the format of each constant is turned into either an integer or a string surrounded by double quotes, e.g., "some name".
+Do this only for Problem 7 where I have given you the categories which do not need changing and some information about what should be included in them.
+Start each reply with Constants:
+
+
+Problem 1:
+Offer contrast-enhanced brain MRI for people with stage III NSCLC who are having treatment with curative intent.
+
+Constants:
+Disease: "NSCLC".
+Finding_of_lung: "stage_III".
+Treatments: "treatment_with_curative_intent".
+Imaging: "contrast_enhanced_brain_MRI".
+
+
+Problem 2:
+Consider an urgent chest X-ray (to be done within 2 weeks) to assess for lung cancer in people aged 40 and over with any of the following:
+• persistent or recurrent chest infection
+• finger clubbing
+• supraclavicular lymphadenopathy or persistent cervical lymphadenopathy
+• chest signs consistent with lung cancer
+
+Constants:
+Symptoms: "persistent_or_recurrent_chest_infection", "finger_clubbing", "supraclavicular_lymphadenopathy", "persistent_cervical_lymphadenopathy", "chest_signs".
+Information_about_patient: "40".
+Imaging: "chest_X-ray".
+
+Problem 3:
+Do not routinely use MRI to assess the stage of the primary tumour (T-stage) in non-small-cell lung cancer (NSCLC)
+
+Constants:
+Disease: "NSCLC".
+Imaging: "MRI".
+Finding_of_lung: "primary_tumour".
+
+
+Problem 4:
+Confirm the presence of isolated distant metastases/synchronous tumours by biopsy or further imaging (for example, MRI or PET-CT) in people being considered for treatment with curative intent.
+
+Constants:
+Imaging: "MRI", "PET-CT".
+Procedures: "biopsy".
+Management: "treatment_with_curative_intent".
+Disease: "isolated_distant_metastases".
+
+Problem 5:
+Refer people using a suspected cancer pathway referral for lung cancer if they:
+• have chest X-ray findings that suggest lung cancer or
+• are aged 40 and over with unexplained haemoptysis.
+• have smoked and are not being considered for treatment with curative intent.
+
+Constants:
+Disease: "lung_cancer".
+Imaging: "chest_X-ray".
+Information_about_patient: "40".
+Symptoms: "haemoptysis", "smoked".
+Management: "suspected_cancer_pathway_referral", "treatment_with_curative_intent".
+
+
+Problem 6:
+% Offer people with known or suspected lung cancer a contrast-enhanced chest CT scan to further the diagnosis and stage the disease. Include the liver, adrenals and lower neck in the scan.
+
+Constants:
+Disease: "lung_cancer".
+Imaging: "contrast_enhanced_chest_CT_scan".
+Anatomical_structures: "liver", "adrenals", "lower_neck".
+
+Problem 7:
+{problem_text}
+
+Disease: Concepts describing different diseases
+Symptoms: Concepts describing symptoms or conditions
+Imaging: Concepts related to medical imaging 
+Procedures: Concepts related to medical Procedures
+Finding_of_lung: Concpets related to information regarding the lung
+Genetic_disease: Concepts related to hereditary or genetic condtions
+Managements: Concepts related to management of a cancer
+Treatments: Concpets related to treating a disease
+Anatomical_structures: Anatomical structures of the body
+Information_about_patient: Concpets related to demographics of the patient 
+Understanding_of_diagnosis: Concepts related to how clear clinician is on the diagnosis
+
+

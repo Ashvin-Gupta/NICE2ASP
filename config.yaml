@@ -1,0 +1,19 @@
+experiment:
+  name: "pancreatic_cancer_guidelines"
+  version: "1"
+  output_dir: "output_files/1"
+
+input_files:
+  problem_text: "input_files/input_guidelines/pancreatic_cancer_guidelines.txt"
+  constant_prompt: "input_files/prompt_files/PC/constant_prompt.txt"
+  predicate_prompt: "input_files/prompt_files/PC/predicate_prompt.txt"
+  rule_generation_prompt: "input_files/prompt_files/PC/rule_generation_prompt.txt"
+  ground_truth: "input_files/ground_truths/GT_PC.lp"
+  
+llm_params:
+  constant_inference_iterations: 1
+  predicate_inference_iterations: 1
+  rule_generation_iterations: 1
+  model: "claude-3-7-sonnet-20250219"
+  temperature: 0.25
+

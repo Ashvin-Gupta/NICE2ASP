@@ -1,0 +1,2 @@
+experiment_name,experiment_number,experiment,model,iterations_constants,iterations_predicates,iterations_rulegen2,temperature,redo_coverage,file_name,wl_similarity,emd_adjusted_similarity,emd_base_similarity,emd_size_penalty,adjacency_adjusted_similarity,adjacency_base_similarity,adjacency_structure_penalty,accuracy,timestamp
+output_files/40,2,lung_cancer_guidelines,llama-3.3-70b-versatile,1,1,1,0.25,no,rulegen2,0.22669,0.78349,0.80932,0.03191,0.33226,0.38198,0.13014,0.57447,2025-04-14 11:56:16

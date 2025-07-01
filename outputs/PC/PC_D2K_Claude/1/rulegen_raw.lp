@@ -1,0 +1,87 @@
+% [1.1.1]
+offer("pancreatic_protocol_CT_scan") :- have("obstructive_jaundice"), suspected(cancer("pancreas")), not offered("draining_the_bile_duct").
+
+% [1.1.2]
+1 {offer("FDG-PET/CT"); offer("EUS_with_EUS-guided_tissue_sampling")} 2 :- have("obstructive_jaundice"), suspected(cancer("pancreas")), offered("pancreatic_protocol_CT_scan"), findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+
+% [1.1.3]
+offer("biliary_brushing") :- have("obstructive_jaundice"), used_for("ERCP", "biliary_obstruction"), findings("no_tissue_diagnosis").
+
+% [1.1.4]
+offer("pancreatic_protocol_CT_scan") :- have("pancreatic_abnormalities"), not have("jaundice").
+
+% [1.1.5]
+1 {offer("FDG-PET/CT"); offer("EUS_with_EUS-guided_tissue_sampling")} 2 :- have("pancreatic_abnormalities"), not have("jaundice"), offered("pancreatic_protocol_CT_scan"), findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+
+% [1.1.6]
+offer("EUS_with_EUS-guided_tissue_sampling") :- have("pancreatic_abnormalities"), not have("jaundice"), need("cytological_or_histological_samples").
+
+% [1.1.7]
+1 {offer("pancreatic_protocol_CT_scan"); offer("MRI/MRCP")} 1 :- have("pancreatic_cysts").
+offer("pancreatic_protocol_CT_scan") :- have("pancreatic_cysts"), offered("MRI/MRCP"), need("more_information").
+offer("MRI/MRCP") :- have("pancreatic_cysts"), offered("pancreatic_protocol_CT_scan"), need("more_information").
+
+% [1.1.8]
+refer("resection", cancer("pancreas")) :- have("pancreatic_cysts"), have("obstructive_jaundice"), located_in("cystic_lesions", "head_of_the_pancreas").
+refer("resection", cancer("pancreas")) :- have("pancreatic_cysts"), have("enhancing_solid_component_in_the_cyst").
+refer("resection", cancer("pancreas")) :- have("pancreatic_cysts"), have("main_pancreatic_duct_that_is_10_mm_diameter_or_larger").
+
+% [1.1.9]
+offer("EUS") :- have("pancreatic_cysts"), offered("pancreatic_protocol_CT_scan"), offered("MRI/MRCP"), need("likelihood_of_malignancy").
+offer("EUS") :- have("pancreatic_cysts"), offered("pancreatic_protocol_CT_scan"), offered("MRI/MRCP"), not need("surgery").
+
+% [1.1.10]
+consider("fine-needle_aspiration") :- have("pancreatic_cysts"), offered("EUS"), need("likelihood_of_malignancy").
+
+% [1.1.11]
+perform("carcinoembryonic_antigen_assay") :- have("pancreatic_cysts"), offered("fine-needle_aspiration"), perform("cytology").
+
+% [1.1.13]
+ask("first-degree_relatives_with_pancreatic_cancer") :- have(cancer("pancreas")).
+
+% [1.1.14]
+offer("surveillance", cancer("pancreas")) :- have("inherited_high_risk"), have("hereditary_pancreatitis"), have("PRSS1").
+offer("surveillance", cancer("pancreas")) :- have("inherited_high_risk"), 1{have("BRCA1"), have("BRCA2"), have("PALB2"), have("CDKN2A")} 4, first_degree_relative(cancer("pancreas"),_).
+offer("surveillance", cancer("pancreas")) :- have("inherited_high_risk"), have("Peutz–Jeghers_syndrome").
+
+% [1.1.15]
+consider("surveillance", cancer("pancreas")) :- have("2_or_more_first-degree_relatives_with_pancreatic_cancer,_across_2_or_more_generations").
+consider("surveillance", cancer("pancreas")) :- have("Lynch_syndrome"), first_degree_relative(cancer("pancreas"),_).
+
+% [1.1.16]
+1 {consider("MRI/MRCP"); consider("EUS")} 2 :- have("inherited_high_risk"), not have("hereditary_pancreatitis").
+
+% [1.1.17]
+consider("pancreatic_protocol_CT_scan") :- have("inherited_high_risk"), have("hereditary_pancreatitis"), have("PRSS1").
+
+% [1.1.18]
+:- have("inherited_high_risk"), have("hereditary_pancreatitis"), offer("EUS").
+
+% [1.3.1]
+% offer("pancreatic_protocol_CT_scan", "CAP") :- have(cancer("pancreas")), not offered("pancreatic_protocol_CT_scan").
+
+% [1.3.2]
+offer("FDG-PET/CT") :- have(cancer("pancreas")), findings_from_procedure("pancreatic_protocol_CT_scan", "localised_disease"), will_have("cancer_treatment").
+
+% [1.3.3]
+consider("MRI") :- have(cancer("pancreas")), need("clinical_management"), suspected("liver_metastases").
+consider("endoscopic_ultrasound") :- have(cancer("pancreas")), need("clinical_management"), need("tumour_and_node_staging").
+consider("laparoscopy_with_laparoscopic_ultrasound") :- have(cancer("pancreas")), need("clinical_management"), suspected("small-volume_peritoneal_and/or_liver_metastases"), will_have("resectional_surgery").
+
+% [1.13.2]
+carry_out("assessment_for_additional_symptoms") :- have("weight_loss").
+1 {offer("urgent_investigation"); offer("suspected_cancer_pathway_referral")} 1 :- have("weight_loss").
+
+% [1.13.3]
+carry_out("assessment_for_additional_symptoms") :- have("appetite_loss").
+1 {offer("urgent_investigation"); offer("suspected_cancer_pathway_referral")} 1 :- have("appetite_loss").
+
+% [1.2.4]
+refer("suspected_cancer_pathway", cancer("pancreas")) :- age(X), have("jaundice"), X>=40.
+
+% [1.2.5]
+consider("urgent_direct_access_CT_scan") :- age(X), X>=60, have("weight_loss"), 1{have("diarrhoea"), have("back_pain"), have("abdominal_pain"), have("nausea"), have("vomiting"), have("constipation"), have("new-onset_diabetes")} 7.
+consider("ultrasound_scan") :- age(X), have("weight_loss"), 1{have("diarrhoea"), have("back_pain"), have("abdominal_pain"), have("nausea"), have("vomiting"), have("constipation"), have("new-onset_diabetes")} 7, X>=60, not offered("urgent,_direct_access_CT_scan").
+
+offered(X) :- offer(X).
+

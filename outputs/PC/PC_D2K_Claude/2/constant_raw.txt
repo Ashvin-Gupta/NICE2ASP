@@ -1,0 +1,18 @@
+
+
+---------------Iteration 1----------------
+
+Constants:
+
+Disease: "pancreatic cancer".
+Symptoms: "obstructive jaundice"; "jaundice"; "diarrhoea"; "back pain"; "abdominal pain"; "nausea"; "vomiting"; "constipation"; "new-onset diabetes"; "weight loss"; "appetite loss"; "biliary obstruction".
+Imaging: "pancreatic protocol CT scan"; "MRI/MRCP"; "laparoscopy with laparoscopic ultrasound"; "ultrasound scan".
+Procedures: "FDG-PET/CT"; "EUS"; "EUS with EUS-guided tissue sampling"; "biliary brushing"; "ERCP"; "fine-needle aspiration"; "CEA assay"; "cytology"; "resection"; "draining the bile duct".
+Finding_of_pancreas: "pancreatic abnormalities"; "pancreatic cysts"; "cystic lesions in the head of the pancreas"; "enhancing solid component in the cyst"; "main pancreatic duct that is 10 mm diameter or larger".
+Genetic_disease: "hereditary pancreatitis"; "PRSS1"; "BRCA1"; "BRCA2"; "PALB2"; "CDKN2A"; "Peutz–Jeghers syndrome"; "Lynch syndrome"; "MLH1"; "MSH2"; "MSH6"; "PMS2".
+Management: "surveillance"; "suspected cancer pathway referral"; "urgent, direct access CT scan"; "urgent investigation".
+Treatments: "surgery"; "radiotherapy"; "systemic therapy"; "cancer treatment"; "resectional surgery".
+Anatomical_structures: "head of the pancreas"; "chest"; "abdomen"; "pelvis"; "liver".
+Information_about_patient: "18"; "40"; "60"; "first-degree relatives with pancreatic cancer"; "inherited high risk"; "2 or more first-degree relatives with pancreatic cancer, across 2 or more generations".
+Understanding_of_diagnosis: "unclear diagnosis"; "no tissue diagnosis"; "likelihood of malignancy"; "localised disease"; "suspected liver metastases"; "suspected small-volume peritoneal and/or liver metastases".
+

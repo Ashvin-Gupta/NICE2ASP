@@ -1,0 +1,154 @@
+You are an expert in answer set programming logic.
+
+Given a problem in natural language, translate the problem into ASP rules using the provided constants and predicates.
+Do this only for all the rules within Problem 7 as the other rules are examples which you should closely study, learn from and apply the patterns present in the examples to Problem 6.
+
+Return the constraints under the rule they refer to in the form of:
+[rule_number] 
+[constraint1].
+[constraint2].
+...
+Where [rule_number] refers to the rule number in the guidelines, e.g 1.1.1, 1.1.2, etc.
+
+Background knowledge that will help:
+- Where curly braces are used in the form of x{{}}y, this means that there is at least x and up to y of the options inside the curly braces.
+- offered(X) :- offer(X). This is important for temporal relationships between rules.
+- Age can be represented as 'age(X), X>=number' where number is the age of the patient.
+
+Problem 1:
+Offer contrast-enhanced brain MRI for people with stage III NSCLC who are having treatment with curative intent.
+
+Constants:
+Disease: "NSCLC".
+Finding_of_lung: "stage_III".
+Treatments: "treatment_with_curative_intent".
+Imaging: "contrast_enhanced_brain_MRI".
+
+Predicates:
+offer(I)
+findings(D, Fl)
+offer(T)
+
+% The ASP rule for this statement is: 
+offer("contrast_enhanced_brain_MRI") :- findings("NSCLC", "stage_III"), offer("treatment_with_curative_intent").
+
+% This rule reads as: 
+% Offer a contrast-enhanced brain MRI to people who have NSCLC of stage III and are being offered treatment with curative intent.
+
+Problem 2:
+Consider an urgent chest X-ray (to be done within 2 weeks) to assess for lung cancer in people aged 40 and over with any of the following:
+• persistent or recurrent chest infection
+• finger clubbing
+• supraclavicular lymphadenopathy or persistent cervical lymphadenopathy
+• chest signs consistent with lung cancer
+
+Constants:
+Symptoms: "persistent_or_recurrent_chest_infection", "finger_clubbing", "supraclavicular_lymphadenopathy", "persistent_cervical_lymphadenopathy", "chest_signs".
+Information_about_patient: "40".
+Imaging: "chest_X-ray".
+
+Predicates:
+consider(I)
+have(S)
+have(Ip)
+
+% The ASP rule for this statement is:
+consider("chest_X-ray") :- age(X), X>=40, 1{{have("persistent_or_recurrent_chest_infection"); have("finger_clubbing"); have("supraclavicular_lymphadenopathy"); have("persistent_cervical_lymphadenopathy"); have("chest_signs")}}5.
+
+% This rule reads as: 
+% Consider an urgent chest X-ray to assess for lung cancer in people aged 40 if they have at least one of the following: persistent or recurrent chest infection, finger clubbing, supraclavicular lymphadenopathy or persistent cervical lymphadenopathy, or chest signs consistent with lung cancer.
+
+Problem 3:
+Do not routinely use MRI to assess the stage of the primary tumour (T-stage) in non-small-cell lung cancer (NSCLC)
+
+Constants:
+Disease: "NSCLC".
+Imaging: "MRI".
+Finding_of_lung: "primary_tumour".
+
+Predicates:
+have(D)
+offer(I)
+assess_stage(Fl)
+
+% The ASP rule for this statement is:
+:- have("NSCLC"), offer("MRI"), assess_stage("primary_tumour").
+
+% This rule reads as:
+% Remove from the answer set any people who have NSCLC and have had an MRI scan to assess the stage of the primary tumour.
+
+Problem 4:
+Confirm the presence of isolated distant metastases/synchronous tumours by biopsy or further imaging (for example, MRI or PET-CT) in people being considered for treatment with curative intent.
+
+Constants:
+Imaging: "MRI", "PET-CT".
+Procedures: "biopsy".
+Management: "treatment_with_curative_intent".
+Disease: "isolated_distant_metastases".
+
+Predicates:
+offer(P)
+offer(I)
+offered(M)
+suspected(D)
+
+% The ASP rule for this statement is:
+1{{offer("biopsy");offer("MRI"); offer("PET-CT")}} 3 :- offered("treatment_with_curative_intent"), suspected("isolated_distant_metastases").
+
+% This rule reads as:
+% Offer at least one and at most three of the options inside the curly braces (biopsy, MRI or PET-CT) to people who are being considered for treatment with curative intent and have isolated distant metastases.
+
+Problem 5:
+Refer people using a suspected cancer pathway referral for lung cancer if they:
+• have chest X-ray findings that suggest lung cancer or
+• are aged 40 and over with unexplained haemoptysis. [2015]
+• have smoked and are not being considered for treatment with curative intent.
+
+Constants:
+Disease: "lung_cancer".
+Imaging: "chest_X-ray".
+Information_about_patient: "40".
+Symptoms: "haemoptysis", "smoked".
+Management: "suspected_cancer_pathway_referral", "treatment_with_curative_intent".
+
+Predicates:
+refer(M, D)
+have(S)
+findings_from_procedure(I, D)
+have(Ip)
+
+% The ASP rule for this statement is:
+refer("suspected_cancer_pathway_referral", cancer("lung")) :- findings_from_procedure("chest_X-ray", cancer("lung")).
+refer("suspected_cancer_pathway_referral", cancer("lung")) :- age(X), X>=40, have("haemoptysis").
+refer("suspected_cancer_pathway_referral", cancer("lung")) :- age(X), X>=40, have("smoked"), not offered("treatment_with_curative_intent").
+
+% This rule reads as:
+% Refer people using a suspected cancer pathway referral for lung cancer if they have chest X-ray findings that suggest lung cancer or are aged 40 and over with unexplained haemoptysis.
+% Note that we represent the age of the patient in the format age(X), where X is the age of the patient.
+
+Problem 6:
+% Offer people with known or suspected lung cancer a contrast-enhanced chest CT scan to further the diagnosis and stage the disease. Include the liver, adrenals and lower neck in the scan.
+
+Constants:
+Disease: "lung_cancer".
+Imaging: "contrast_enhanced_chest_CT_scan".
+Anatomical_structures: "liver", "adrenals", "lower_neck".
+
+Predicates:
+offer(I)
+include(I, A)
+have(D)
+suspected(D)
+
+% The ASP rule for this statement is:
+% offer("contrast_enhanced_chest_CT_scan") :- 1{{have(cancer("lung")); suspected(cancer("lung"))}}2 .
+% 3{{include("contrast_enhanced_chest_CT_scan", "liver"); include("contrast_enhanced_chest_CT_scan", "adrenals"); include("contrast_enhanced_chest_CT_scan", "lower_neck")}} 3 :- offer("contrast_enhanced_chest_CT_scan").
+
+
+
+Problem 7:
+
+{problem_text}
+
+
+Rules:

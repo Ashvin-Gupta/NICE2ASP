@@ -1,0 +1,144 @@
+You are an expert in answer set programming logic.
+
+Given a problem in natural language, translate the problem into ASP rules using the provided constants and predicates.
+Do this only for the text in Problem 6 and the other rules are examples which you should closely study, learn from and apply the patterns present in the examples to Problem 6.
+
+Return the constraints under the rule they refer to in the form of:
+[rule_number] 
+[constraint1].
+[constraint2].
+...
+Where [rule_number] refers to the rule number in the guidelines, e.g 1.1.1, 1.1.2, etc.
+
+Background knowledge that will help:
+- offered(X) :- offer(X). This is important for temporal relationships between rules.
+- Age can be represented as 'age(X), X>=number' where number is the age of the patient.
+
+Problem 1:
+[People without jaundice who have pancreatic abnormalities on imaging] Offer a pancreatic protocol CT scan to people with pancreatic abnormalities but no jaundice. If the diagnosis is still unclear offer FDG-PET/CT and/or EUS with EUS-guided tissue sampling.
+
+Constants:
+Imaging: "pancreatic protocol CT".
+Finding_of_pancreas: "pancreatic abnormalities".
+Symptoms: "jaundice".
+Procedures: "FDG-PET/CT"; "EUS"; "EUS with tissue".
+General_findings: "unclear diagnosis".
+
+Predicates:
+offer(I)
+offer(P)
+have(Fp)
+have(S)
+findings_from_procedure(I, Gf)
+offered(I)
+
+
+% The ASP rule for this statement is: 
+offer("pancreatic_protocol_ct") :- have("pancreatic_abnormalities"), not have("jaundice").
+1 {{offer("FDG-PET/CT"); offer("EUS_with_tissue")}} 2 :- have("pancreatic_abnormalities"), not have("jaundice"), offered("pancreatic_protocol_ct"), findings_from_procedure("pancreatic_protocol_ct", "diagnosis_unclear").
+
+% These rules read as: 
+% offer a pancreatic protocol CT scan to people with pancreatic abnormalities but no jaundice. 
+% Choose at least 1 but no more than 2 of the options in the curly brackets if we have offered a pancreatic protocol CT scan, the diagnosis is unclear, the patient has pancreatic abnormalities and the patient does not have jaundice.
+% Note the offered(I) predicate is VERY important here as it allows us to have temporal relationships within our rules.
+
+Problem 2:
+[People with obstructive jaundice] Take a biliary brushing for cytology if: endoscopic retrograde cholangiopancreatography (ERCP) is being used to relieve the biliary obstruction and there is no tissue diagnosis.
+
+Constants:
+Procedures: "bilary brushing"; "ERCP".
+General_findings: "no tissue diagnosis".
+Symptoms: "bilary obstruction", "obstructive jaundice".
+
+Predicates:
+offer(P)
+have(S)
+findings(Gf)
+offer(P, S)
+
+% The ASP rule for this statement is:
+offer("biliary_brushing") :- have("obstructive_jaundice"), findings("no_tissue_diagnosis"), offer("ERCP", "bilary_obstruction").
+
+% This rule reads as: 
+% offer a biliary brushing for cytology to people where EUS is being used to treat biliary obstruction, there is no tissue diagnosis and the patient has obstructive jaundice.
+
+Problem 3:
+[People with inherited high risk of pancreatic cancer] Offer surveillance for pancreatic cancer to people with:
+• hereditary pancreatitis and a PRSS1 mutation
+• BRCA1, BRCA2, PALB2 or CDKN2A (p16) mutations, and one or more first-degree relatives with pancreatic cancer
+
+Constants:
+Disease: "pancreatic cancer".
+Management: "surveillance".
+Genetic_disease: "hereditary pancreatitis", "PRSS1", "BRCA1", "BRCA2".
+Information_about_patient: "firstdegree relatives with pancreatic cancer", "inherited high risk".
+
+Predicates:
+offer(M, D)
+have(Gd)
+have(Ip)
+first_degree_relative(D, PersonID)
+
+% The ASP rules for these statements are:
+offer("surveillance", cancer("pancreas")) :- have("inherited_high_risk"), have("hereditary_pancreatitis"), have("PRSS1").
+offer("surveillance", cancer("pancreas")) :- have("inherited_high_risk"), 1{have("BRCA1"); have("BRCA2"); have("PALB2"); have("CDKN2A")}4, first_degree_relative(cancer("pancreas"),_).
+
+% These rules read as: 
+% offer surveillance for pancreatic cancer to people with hereditary pancreatitis and a PRSS1 mutation and the patient has inherited high risk.
+% offer surveillance for pancreatic cancer to people with BRCA1, BRCA2, PALB2 or CDKN2A (p16) mutations, at least one first-degree relatives with pancreatic cancer and the patient has inherited high risk.
+
+% Note that we represent how many first degree relatives have a disease in the format first_degree_relative(D,X), where D is the disease and X is person X. 
+% Both D and X can be left blank, _, if we do not know the disease or the person. If there are two people that have the same diesase we could exploit this syntax and write X!=Y to show that they are different people.
+
+Problem 4:
+[People with inherited high risk of pancreatic cancer] Do not offer EUS to detect pancreatic cancer in people with hereditary pancreatitis.
+
+Constants:
+Procedures: "EUS".
+Genetic_disease: "hereditary pancreatitis".
+Disease: "pancreatic cancer".
+Information_about_patient: "inherited high risk".
+
+Predicates:
+offer(P)
+have(Gd)
+have(Ip)
+
+% The ASP rule for this statement is:
+:- have("inherited_high_risk"), offer("EUS"), have("hereditary_pancreatitis").
+
+% This rule reads as: 
+% [People with inherited high risk of pancreatic cancer] Do not offer EUS to detect pancreatic cancer in people with hereditary pancreatitis.
+
+Problem 5:
+Refer people using a suspected cancer pathway referral for pancreatic cancer if they are aged 40 and over and have jaundice.
+
+Constants:
+Disease: "pancreatic cancer".
+Symptoms: "jaundice".
+Information_about_patient: "40".
+Management: "suspected cancer pathway referral".
+
+Predicates:
+refer(M, D)
+have(S)
+have(Ip)
+
+% The ASP rule for this statement is:
+refer("suspected_cancer_pathway", cancer("pancreas")) :- age(X), have("jaundice"), X>=40.
+
+% These rules read as: 
+% Refer people using a suspected cancer pathway referral for pancreatic cancer if they are aged 40 and over and have jaundice.
+% Note that we represent the age of the patient in the format age(X), where X is the age of the patient.
+
+
+Problem 6:
+
+{problem_text}
+
+{constants}
+
+Predicates:
+{predicates}
+
+Constraints:

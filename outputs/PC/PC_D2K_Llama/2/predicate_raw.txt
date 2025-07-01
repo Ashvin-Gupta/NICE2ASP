@@ -1,0 +1,50 @@
+
+
+---------------Iteration 1----------------
+
+Based on the provided guidelines, the following predicates can be defined:
+
+- offer(I) 
+- offer(P) 
+- have(S) 
+- have(Fp) 
+- have(Gd) 
+- have(Ip) 
+- findings_from_procedure(I, Gf) 
+- offered(I) 
+- refer(M, D) 
+- first_degree_relative(D, PersonID) 
+- findings(Gf) 
+- need(P, S) 
+
+These predicates cover the main actions and relationships described in the guidelines, including offering imaging or procedures, having symptoms or findings, referring patients, and considering first-degree relatives. 
+
+Note that some of these predicates may be used in combination to represent more complex relationships, such as offering a procedure based on a specific finding or symptom. 
+
+Additionally, the following predicates can be defined to represent specific actions or relationships mentioned in the guidelines:
+
+- consider(P) 
+- carry_out_assessment(S) 
+- urgent_investigation(D) 
+- suspected_cancer_pathway_referral(D) 
+- perform(Tr) 
+
+These predicates can be used to represent actions such as considering a procedure, carrying out an assessment, or performing a treatment. 
+
+It's worth noting that the predicates should be defined in a way that is consistent with the guidelines and the categories of constants provided. The variables used in the predicates (e.g. I, P, S, Fp, Gd, Ip, Gf, D, M, Tr, As) should be used consistently to represent the corresponding categories of constants. 
+
+For example, the variable I should always represent Imaging, P should always represent Procedures, and so on. This will help to ensure that the predicates are used consistently and accurately throughout the guidelines. 
+
+Also, the predicates should be defined in a way that is concise and easy to understand. The use of clear and descriptive names for the predicates and variables can help to improve the readability and maintainability of the guidelines. 
+
+In summary, the predicates defined above provide a comprehensive representation of the actions and relationships described in the guidelines, and can be used to support the development of a formal representation of the guidelines using a logic-based approach. 
+
+Here are some examples of how these predicates can be used to represent specific statements from the guidelines:
+
+- offer("pancreatic_protocol_ct") :- have("obstructive_jaundice"), have("suspected_pancreatic_cancer").
+- refer("suspected_cancer_pathway", "pancreatic_cancer") :- have("jaundice"), age(X), X >= 40.
+- consider("EUS") :- have("pancreatic_cysts"), findings_from_procedure("CT", "unclear_diagnosis").
+- carry_out_assessment("unexplained_weight_loss") :- have("unexplained_weight_loss"), consider("urgent_investigation", "pancreatic_cancer").
+
+These examples illustrate how the predicates can be used to represent specific statements from the guidelines, and how they can be combined to represent more complex relationships and actions.
+

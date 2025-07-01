@@ -1,0 +1,107 @@
+
+
+---------------Iteration 1----------------
+
+I'll translate Problem 6 into ASP rules based on the patterns shown in the examples.
+
+[1.1.1]
+offer("pancreatic_protocol_ct") :- have("obstructive_jaundice"), suspected(cancer("pancreas")), not drained("bile_duct").
+
+[1.1.2]
+1 {offer("FDG-PET/CT"); offer("EUS_with_tissue")} 2 :- have("obstructive_jaundice"), suspected(cancer("pancreas")), offered("pancreatic_protocol_ct"), findings_from_procedure("pancreatic_protocol_ct", "diagnosis_unclear").
+
+[1.1.3]
+offer("biliary_brushing") :- have("obstructive_jaundice"), offer("ERCP", "biliary_obstruction"), findings("no_tissue_diagnosis").
+
+[1.1.4]
+offer("pancreatic_protocol_ct") :- have("pancreatic_abnormalities"), not have("jaundice").
+
+[1.1.5]
+1 {offer("FDG-PET/CT"); offer("EUS_with_tissue")} 2 :- have("pancreatic_abnormalities"), not have("jaundice"), offered("pancreatic_protocol_ct"), findings_from_procedure("pancreatic_protocol_ct", "diagnosis_unclear").
+
+[1.1.6]
+offer("EUS_with_tissue") :- have("pancreatic_abnormalities"), not have("jaundice"), needed("cytological_samples").
+offer("EUS_with_tissue") :- have("pancreatic_abnormalities"), not have("jaundice"), needed("histological_samples").
+
+[1.1.7]
+1 {offer("pancreatic_protocol_ct"); offer("MRI/MRCP")} 1 :- have("pancreatic_cysts").
+offer(O) :- have("pancreatic_cysts"), offered(P), P != O, {P = "pancreatic_protocol_ct"; P = "MRI/MRCP"}, {O = "pancreatic_protocol_ct"; O = "MRI/MRCP"}, findings_from_procedure(P, "more_information_needed").
+
+[1.1.8]
+refer("resection") :- have("pancreatic_cysts"), have("obstructive_jaundice"), location("cystic_lesions", "head_of_pancreas").
+refer("resection") :- have("pancreatic_cysts"), have("enhancing_solid_component").
+refer("resection") :- have("pancreatic_cysts"), have("main_pancreatic_duct_10mm_or_larger").
+
+[1.1.9]
+offer("EUS") :- have("pancreatic_cysts"), offered("CT"), offered("MRI/MRCP"), findings("more_information_on_malignancy_needed").
+offer("EUS") :- have("pancreatic_cysts"), offered("CT"), offered("MRI/MRCP"), findings("surgery_decision_unclear").
+
+[1.1.10]
+consider("fine_needle_aspiration_during_EUS") :- have("pancreatic_cysts"), findings("more_information_on_malignancy_needed").
+
+[1.1.11]
+perform("CEA_assay") :- use("fine_needle_aspiration"), perform("cytology"), sufficient_sample.
+
+[1.1.12]
+follow("staging_recommendations") :- have("pancreatic_cysts"), findings("cysts_thought_to_be_malignant").
+
+[1.1.13]
+ask("first_degree_relatives_with_pancreatic_cancer") :- have(cancer("pancreas")).
+
+[1.1.14]
+offer("surveillance", cancer("pancreas")) :- have("inherited_high_risk"), have("hereditary_pancreatitis"), have("PRSS1").
+offer("surveillance", cancer("pancreas")) :- have("inherited_high_risk"), have("BRCA1"), first_degree_relative(cancer("pancreas"),_).
+offer("surveillance", cancer("pancreas")) :- have("inherited_high_risk"), have("BRCA2"), first_degree_relative(cancer("pancreas"),_).
+offer("surveillance", cancer("pancreas")) :- have("inherited_high_risk"), have("PALB2"), first_degree_relative(cancer("pancreas"),_).
+offer("surveillance", cancer("pancreas")) :- have("inherited_high_risk"), have("CDKN2A"), first_degree_relative(cancer("pancreas"),_).
+offer("surveillance", cancer("pancreas")) :- have("inherited_high_risk"), have("Peutz_Jeghers_syndrome").
+
+[1.1.15]
+consider("surveillance", cancer("pancreas")) :- first_degree_relative(cancer("pancreas"), X), first_degree_relative(cancer("pancreas"), Y), X != Y, generation(X, G1), generation(Y, G2), G1 != G2.
+consider("surveillance", cancer("pancreas")) :- have("Lynch_syndrome"), first_degree_relative(cancer("pancreas"),_).
+
+[1.1.16]
+consider("MRI/MRCP") :- not have("hereditary_pancreatitis"), surveillance_for(cancer("pancreas")).
+consider("EUS") :- not have("hereditary_pancreatitis"), surveillance_for(cancer("pancreas")).
+
+[1.1.17]
+consider("pancreatic_protocol_ct") :- have("hereditary_pancreatitis"), have("PRSS1"), surveillance_for(cancer("pancreas")).
+
+[1.1.18]
+:- have("inherited_high_risk"), offer("EUS"), have("hereditary_pancreatitis").
+
+[1.3.1]
+offer("pancreatic_protocol_ct") :- have(cancer("pancreas")), diagnosis("new"), not had("pancreatic_protocol_ct").
+
+[1.3.2]
+offer("FDG-PET/CT") :- have(cancer("pancreas")), findings_from_procedure("CT", "localised_disease"), will_have("cancer_treatment").
+
+[1.3.3]
+consider("MRI") :- have(cancer("pancreas")), needed("more_information_for_management"), suspected("liver_metastases").
+consider("endoscopic_ultrasound") :- have(cancer("pancreas")), needed("more_information_for_management"), needed("tumour_node_staging").
+consider("laparoscopy_with_ultrasound") :- have(cancer("pancreas")), needed("more_information_for_management"), suspected("small_volume_peritoneal_metastases"), possible("resectional_surgery").
+consider("laparoscopy_with_ultrasound") :- have(cancer("pancreas")), needed("more_information_for_management"), suspected("small_volume_liver_metastases"), possible("resectional_surgery").
+
+[1.13.2]
+assess("additional_symptoms") :- have("unexplained_weight_loss").
+offer("urgent_investigation") :- have("unexplained_weight_loss").
+offer("suspected_cancer_pathway_referral") :- have("unexplained_weight_loss").
+
+[1.13.3]
+assess("additional_symptoms") :- have("unexplained_appetite_loss").
+offer("urgent_investigation") :- have("unexplained_appetite_loss").
+offer("suspected_cancer_pathway_referral") :- have("unexplained_appetite_loss").
+
+[1.2.4]
+refer("suspected_cancer_pathway", cancer("pancreas")) :- age(X), have("jaundice"), X>=40.
+
+[1.2.5]
+consider("urgent_direct_access_CT") :- age(X), X>=60, have("weight_loss"), have("diarrhoea").
+consider("urgent_direct_access_CT") :- age(X), X>=60, have("weight_loss"), have("back_pain").
+consider("urgent_direct_access_CT") :- age(X), X>=60, have("weight_loss"), have("abdominal_pain").
+consider("urgent_direct_access_CT") :- age(X), X>=60, have("weight_loss"), have("nausea").
+consider("urgent_direct_access_CT") :- age(X), X>=60, have("weight_loss"), have("vomiting").
+consider("urgent_direct_access_CT") :- age(X), X>=60, have("weight_loss"), have("constipation").
+consider("urgent_direct_access_CT") :- age(X), X>=60, have("weight_loss"), have("new_onset_diabetes").
+consider("urgent_ultrasound") :- age(X), X>=60, have("weight_loss"), have(S), {S = "diarrhoea"; S = "back_pain"; S = "abdominal_pain"; S = "nausea"; S = "vomiting"; S = "constipation"; S = "new_onset_diabetes"}, not available("CT").
+

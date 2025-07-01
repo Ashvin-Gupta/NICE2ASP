@@ -1,0 +1,137 @@
+Given a problem and some categorized constants of the form "category: constant_1; constant_2; ...; constant_n", generate the minimum number of predicates to define the relations among the categories of constants. Each generated predicate is of the form "predicate(X1, X2, ..., Xn)" where X1, X2, ..., Xn are different variables and each variable X belongs to one of the categories.
+Do this only for Problem 7 where the predicates should be verbs explicitly mentioned in the guidelines. The other problems are examples, follow and learn their pattern closley.
+As the guidelines are for one disease, predicates do not need to include the disease most of the time.
+Note that in the guidelines, there is sometimes a statement at the start of the paragraph that applies to all the rules in that section.
+Start each predicate with - 
+
+Background knowledge that will help:
+- As these are medical guidelines often the predicates will be verbs.
+- Common predicates include: offer, offered, have, need, findings, findings_from_procedure, refer
+
+Problem 1:
+Offer contrast-enhanced brain MRI for people with stage III NSCLC who are having treatment with curative intent.
+
+Constants:
+Disease: "NSCLC".
+Finding_of_lung: "stage_III".
+Treatments: "treatment_with_curative_intent".
+Imaging: "contrast_enhanced_brain_MRI".
+
+Predicates:
+% The categories in Constants include disease, finding_of_lung, treatments and imaging. We use different variables D, Fl, T and I to represent disease, finding_of_lung, treatments and imaging.
+% And therefore we offer imaging I, findings disease D with a finding of the lung Fl and offer treatment T.
+
+offer(I)
+findings(D, Fl)
+offer(T)
+
+Problem 2:
+Consider an urgent chest X-ray (to be done within 2 weeks) to assess for lung cancer in people aged 40 and over with any of the following:
+• persistent or recurrent chest infection
+• finger clubbing
+• supraclavicular lymphadenopathy or persistent cervical lymphadenopathy
+• chest signs consistent with lung cancer
+
+Constants:
+Symptoms: "persistent_or_recurrent_chest_infection", "finger_clubbing", "supraclavicular_lymphadenopathy", "persistent_cervical_lymphadenopathy", "chest_signs".
+Information_about_patient: "40".
+Imaging: "chest_X-ray".
+
+Predicates:
+% The categories in Constants include symptoms, information_about_patient and imaging. We use different variables S, Ip and I to represent symptoms, information_about_patient and imaging.
+% And therefore we consider imaging I, if they have a symptom S and have information about the patient Age.
+
+consider(I)
+have(S)
+have(Ip)
+
+Problem 3:
+Do not routinely use MRI to assess the stage of the primary tumour (T-stage) in non-small-cell lung cancer (NSCLC)
+
+Constants:
+Disease: "NSCLC".
+Imaging: "MRI".
+Finding_of_lung: "primary_tumour".
+
+Predicates:
+% The categories in Constants include disease, imaging and finding_of_lung. We use different variables D, I and Fl to represent disease, imaging and finding_of_lung.
+% And therefore we have disease D, offer imaging I, and have a finding of the lung Fl.
+
+have(D)
+offer(I)
+assess_stage(Fl)
+
+Problem 4:
+Confirm the presence of isolated distant metastases/synchronous tumours by biopsy or further imaging (for example, MRI or PET-CT) in people being considered for treatment with curative intent.
+
+Constants:
+Imaging: "MRI", "PET-CT".
+Procedures: "biopsy".
+Management: "treatment_with_curative_intent".
+Disease: "isolated_distant_metastases".
+
+Predicates:
+% The categories in Constants include imaging, procedures, management and disease. We use different variables I, P, M and D to represent imaging, procedures, management and disease.
+% And therefore we offer a procedure P or imaging I, offerd a management M, and suspected a disease D.
+
+offer(P)
+offer(I)
+offered(M)
+suspected(D)
+
+
+Problem 5:
+Refer people using a suspected cancer pathway referral for lung cancer if they:
+• have chest X-ray findings that suggest lung cancer or
+• are aged 40 and over with unexplained haemoptysis.
+• have smoked and are not being considered for treatment with curative intent.
+
+Constants:
+Disease: "lung_cancer".
+Imaging: "chest_X-ray".
+Information_about_patient: "40".
+Symptoms: "haemoptysis", "smoked".
+Management: "suspected_cancer_pathway_referral", "treatment_with_curative_intent".
+
+Predicates
+% The categories in Constants include disease, imaging, information_about_patient, symptoms and management. We use different variables D, I, Ip, S and M to represent disease, imaging, information_about_patient, symptoms and management.
+% And therefore we refer management M for disease D, have a symptom S, a disease D from findings from procedure I and have information about the patient Age.
+
+refer(M, D)
+have(S)
+findings_from_procedure(I, D)
+have(Ip)
+
+
+Problem 6:
+% Offer people with known or suspected lung cancer a contrast-enhanced chest CT scan to further the diagnosis and stage the disease. Include the liver, adrenals and lower neck in the scan.
+
+Constants:
+Disease: "lung_cancer".
+Imaging: "contrast_enhanced_chest_CT_scan".
+Anatomical_structures: "liver", "adrenals", "lower_neck".
+
+Predicates:
+% The categories in Constants include disease, imaging, anatomical_structures. We use different variables D, I and A to represent disease, imaging and anatomical_structures.
+% 3{{include("contrast_enhanced_chest_CT_scan", "liver"); include("contrast_enhanced_chest_CT_scan", "adrenals"); include("contrast_enhanced_chest_CT_scan", "lower_neck")}} 3 :- offer("contrast_enhanced_chest_CT_scan").
+
+offer(I)
+include(I, A)
+have(D)
+suspected(D)
+
+
+Problem 7:
+{problem_text}
+
+
+% The categories in Constants include Disease, Symptoms, Imaging, Procedures, Finding_of_lung, Genetic_disease , Management, Treatments, Anatomical_structures, Information_about_patient, General_findings.
+% We use the different variables D, S, I, P, Fl, Gd, M, Tr, As, Ip, Gf to represent Disease, Symptoms, Imaging, Procedures, Finding_of_lung, Genetic_disease , Management, Treatments, Anatomical_structures, Information_about_patient, General_findings.
+
+
+{processed_constants}
+
+
+Predicates:
+
+

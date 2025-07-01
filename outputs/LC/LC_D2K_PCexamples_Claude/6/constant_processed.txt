@@ -1,0 +1,12 @@
+Constants:
+Anatomical_structures: "adrenals"; "brain"; "chest_wall"; "liver"; "lower_neck"; "mediastinal".
+Disease: "NSCLC"; "bone_metastasis"; "brain_metastases"; "intracranial_pathology"; "isolated_distant_metastases"; "lung_cancer"; "synchronous_tumours".
+Finding_of_lung: "T-stage"; "central_lesions"; "intrathoracic_lymph_node"; "intrathoracic_nodes"; "nodal_malignancy"; "paratracheal_and_peri-bronchial_intra-parenchymal_lung_lesions"; "peripheral_lung_lesions"; "primary_tumour"; "stage_I"; "stage_II"; "stage_III"; "superior_sulcus_tumours".
+Genetic_disease: "EGFR-TK_mutation".
+Imaging: "CT"; "MRI"; "PET-CT"; "USS"; "X-ray"; "bone_scintigraphy"; "chest_X-ray"; "contrast_enhanced_brain_CT"; "contrast_enhanced_brain_MRI"; "contrast_enhanced_chest_CT_scan"; "flexible_bronchoscopy"; "ultrasound".
+Information_about_patient: "40"; "ever_smoked".
+Managements: "fast-track_lung_cancer_clinics"; "lung_cancer_clinical_nurse_specialists"; "lung_cancer_multidisciplinary_team_meeting"; "suspected_cancer_pathway_referral".
+Procedures: "EBUS-TBNA"; "EUS-FNA"; "ablative_treatment"; "biopsy"; "bronchoscopy"; "image-guided_biopsy"; "sputum_cytology"; "surgical_mediastinal_staging".
+Symptoms: "appetite_loss"; "chest_pain"; "chest_signs"; "cough"; "fatigue"; "finger_clubbing"; "haemoptysis"; "localised_signs_or_symptoms_of_bone_metastasis"; "neurological_symptoms"; "persistent_cervical_lymphadenopathy"; "persistent_or_recurrent_chest_infection"; "shortness_of_breath"; "supraclavicular_lymphadenopathy"; "weight_loss".
+Treatments: "chemotherapy"; "radical_treatment"; "radiotherapy"; "treatment_with_curative_intent".
+Understanding_of_diagnosis: "known_lung_cancer"; "suspected_lung_cancer"; "working_diagnosis_of_lung_cancer".

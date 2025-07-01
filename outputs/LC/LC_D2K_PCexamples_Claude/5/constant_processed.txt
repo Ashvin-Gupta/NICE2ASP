@@ -1,0 +1,11 @@
+Constants:
+Anatomical_structures: "adrenals"; "bone"; "brain"; "chest_wall"; "intrathoracic_lymph_nodes"; "intrathoracic_nodes"; "liver"; "lower_neck"; "mediastinal".
+Disease: "NSCLC"; "lung_cancer".
+Finding_of_lung: "T-stage"; "central_lesions"; "centrally_placed_nodules_or_masses"; "paratracheal_and_peri-bronchial_intra-parenchymal_lung_lesions"; "peripheral_lung_lesions"; "primary_tumour"; "stage_I"; "stage_II"; "stage_III"; "superior_sulcus_tumours".
+Genetic_disease: "EGFR-TK_mutation".
+Imaging: "MRI"; "PET-CT"; "X-ray"; "bone_scintigraphy"; "chest_X-ray"; "contrast_enhanced_brain_CT"; "contrast_enhanced_brain_MRI"; "contrast_enhanced_chest_CT_scan"; "ultrasound".
+Managements: "fast-track_lung_cancer_clinics"; "lung_cancer_multidisciplinary_team_meeting"; "suspected_cancer_pathway_referral".
+Procedures: "EBUS-TBNA"; "EGFR-TK_mutation_testing"; "EUS-FNA"; "biopsy"; "bronchoscopy"; "flexible_bronchoscopy"; "image-guided_biopsy"; "invasive_tests"; "sputum_cytology"; "surgical_mediastinal_staging".
+Symptoms: "appetite_loss"; "chest_pain"; "chest_signs"; "cough"; "fatigue"; "finger_clubbing"; "haemoptysis"; "localised_signs_or_symptoms_of_bone_metastasis"; "neurological_symptoms"; "persistent_cervical_lymphadenopathy"; "persistent_or_recurrent_chest_infection"; "shortness_of_breath"; "supraclavicular_lymphadenopathy"; "weight_loss".
+Treatments: "ablative_treatment"; "chemotherapy"; "radical_treatment"; "radiotherapy"; "resection"; "treatment_with_curative_intent".
+Understanding_of_diagnosis: "known_lung_cancer"; "suspected_lung_cancer"; "working_diagnosis_of_lung_cancer".

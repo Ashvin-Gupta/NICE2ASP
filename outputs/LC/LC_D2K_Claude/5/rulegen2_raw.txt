@@ -1,0 +1,107 @@
+
+
+---------------Iteration 1----------------
+
+I'll analyze Problem 6 and provide the ASP rules based on the patterns in the examples. Let me translate the relevant sections into ASP constraints:
+
+[1.3.1]
+use("sputum_cytology") :- have("lung_cancer"), have("centrally_placed_nodules"), decline("bronchoscopy"), decline("invasive_tests").
+use("sputum_cytology") :- have("lung_cancer"), have("masses"), decline("bronchoscopy"), decline("invasive_tests").
+use("sputum_cytology") :- have("lung_cancer"), have("centrally_placed_nodules"), not tolerate("bronchoscopy"), not tolerate("invasive_tests").
+use("sputum_cytology") :- have("lung_cancer"), have("masses"), not tolerate("bronchoscopy"), not tolerate("invasive_tests").
+:- use("sputum_cytology"), not have("centrally_placed_nodules"), not have("masses").
+:- use("sputum_cytology"), tolerate("bronchoscopy"), tolerate("invasive_tests").
+:- use("sputum_cytology"), not decline("bronchoscopy"), not decline("invasive_tests"), tolerate("bronchoscopy"), tolerate("invasive_tests").
+
+[1.3.2]
+offer("contrast-enhanced_chest_CT_scan") :- have("lung_cancer").
+offer("contrast-enhanced_chest_CT_scan") :- suggest("chest_X-ray", "lung_cancer").
+include("contrast-enhanced_chest_CT_scan", "liver").
+include("contrast-enhanced_chest_CT_scan", "adrenals").
+include("contrast-enhanced_chest_CT_scan", "lower_neck").
+
+[1.3.4]
+offer("PET-CT") :- have("lung_cancer"), suitable_for("lung_cancer", "treatment_with_curative_intent").
+
+[1.3.6]
+:- have("NSCLC"), use("MRI"), assess_stage("primary_tumour").
+
+[1.3.7]
+offer("MRI") :- have("superior_sulcus_tumours"), assess("extent_of_disease").
+
+[1.3.8]
+offer("EBUS-TBNA") :- biopsy("paratracheal_lesions").
+offer("EBUS-TBNA") :- biopsy("peri-bronchial_intra-parenchymal_lung_lesions").
+
+[1.3.14]
+perform("contrast-enhanced_CT") :- include("contrast-enhanced_CT", "chest"), include("contrast-enhanced_CT", "liver"), include("contrast-enhanced_CT", "adrenals"), include("contrast-enhanced_CT", "lower_neck"), perform("biopsy").
+
+[1.3.15]
+offer("image-guided_biopsy") :- have("peripheral_lung_lesions"), plan("treatment").
+
+[1.3.16]
+biopsy("intrathoracic_nodes") :- affect("intrathoracic_nodes", "treatment").
+:- biopsy("primary_lesion"), affect("intrathoracic_nodes", "treatment").
+
+[1.3.17]
+offer("flexible_bronchoscopy") :- have("central_lesions"), not influence("nodal_staging", "treatment").
+
+[1.3.18]
+offer("PET-CT") :- have("lung_cancer"), suitable_for("lung_cancer", "treatment_with_curative_intent").
+
+[1.3.19]
+1 {offer("EBUS-TBNA"); offer("EUS-FNA")} 2 :- have("lung_cancer"), have("intrathoracic_lymph_nodes"), suitable_for("lung_cancer", "treatment_with_curative_intent"), offered("PET-CT").
+
+[1.3.21]
+consider("surgical_mediastinal_staging") :- offered("EBUS-TBNA"), not findings_from("EBUS-TBNA", "nodal_malignancy"), affect("nodal_status", "treatment").
+consider("surgical_mediastinal_staging") :- offered("EUS-FNA"), not findings_from("EUS-FNA", "nodal_malignancy"), affect("nodal_status", "treatment").
+
+[1.3.23]
+:- have("NSCLC"), not have("neurological_symptoms"), suitable_for("NSCLC", "treatment_with_curative_intent"), offer("brain_imaging").
+
+[1.3.24]
+offer("contrast-enhanced_brain_CT") :- have("NSCLC"), suitable_for("NSCLC", "treatment_with_curative_intent").
+offer("contrast-enhanced_brain_MRI") :- have("NSCLC"), suitable_for("NSCLC", "treatment_with_curative_intent"), findings_from("contrast-enhanced_brain_CT", "brain_metastases").
+
+[1.3.25]
+offer("contrast-enhanced_brain_MRI") :- have("NSCLC"), suitable_for("NSCLC", "treatment_with_curative_intent").
+
+[1.3.26]
+offer("CT") :- have("intracranial_pathology").
+offer("MRI") :- have("intracranial_pathology"), not findings_from("CT", "intracranial_pathology").
+offer("MRI") :- have("intracranial_pathology").
+
+[1.3.27]
+perform("X-ray") :- have("bone_metastasis").
+offer("bone_scintigraphy") :- have("bone_metastasis"), not findings_from("X-ray", "bone_metastasis").
+offer("MRI") :- have("bone_metastasis"), not findings_from("X-ray", "bone_metastasis").
+
+[1.3.28]
+:- offer("bone_scintigraphy"), not findings_from("PET-CT", "bone_metastases").
+
+[1.3.30]
+refer("multidisciplinary_team", "lung_cancer") :- suggest("chest_X-ray", "lung_cancer").
+
+[1.3.31]
+discussed_at("lung_cancer", "multidisciplinary_team_meeting") :- have("lung_cancer").
+
+[1.3.32]
+provide("fast-track_lung_cancer_clinics") :- suggest("chest_X-ray", "lung_cancer").
+
+[1.3.33]
+offer("cancer_clinical_nurse_specialists") :- have("lung_cancer").
+see("cancer_clinical_nurse_specialists", "patient") :- have("lung_cancer").
+facilitate("cancer_clinical_nurse_specialists", "communication") :- have("lung_cancer").
+help_access("cancer_clinical_nurse_specialists", "support") :- have("lung_cancer").
+
+[1.3.34]
+refer("suspected_cancer_pathway_referral", "lung_cancer") :- suggest("chest_X-ray", "lung_cancer").
+refer("suspected_cancer_pathway_referral", "lung_cancer") :- age(X), X>=40, unexplained("haemoptysis").
+
+[1.3.35]
+offer("urgent_chest_X-ray") :- age(X), X>=40, 2{unexplained("cough"); unexplained("fatigue"); unexplained("shortness_of_breath"); unexplained("chest_pain"); unexplained("weight_loss"); unexplained("appetite_loss")}.
+offer("urgent_chest_X-ray") :- age(X), X>=40, have("ever_smoked"), 1{unexplained("cough"); unexplained("fatigue"); unexplained("shortness_of_breath"); unexplained("chest_pain"); unexplained("weight_loss"); unexplained("appetite_loss")}.
+
+[1.3.36]
+consider("urgent_chest_X-ray") :- age(X), X>=40, 1{have("persistent_or_recurrent_chest_infection"); have("finger_clubbing"); have("supraclavicular_lymphadenopathy"); have("persistent_cervical_lymphadenopathy"); have("chest_signs")}.
+

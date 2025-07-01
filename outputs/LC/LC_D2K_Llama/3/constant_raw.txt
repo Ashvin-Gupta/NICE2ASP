@@ -1,0 +1,17 @@
+
+
+---------------Iteration 1----------------
+
+Constants:
+Disease: "lung cancer"; "NSCLC".
+Symptoms: "jaundice"; "haemoptysis"; "cough"; "fatigue"; "shortness of breath"; "chest pain"; "weight loss"; "appetite loss"; "persistent or recurrent chest infection"; "finger clubbing"; "supraclavicular lymphadenopathy"; "persistent cervical lymphadenopathy".
+Imaging: "sputum cytology"; "contrast-enhanced chest CT scan"; "CT"; "PET-CT"; "MRI"; "X-ray"; "bone scintigraphy"; "ultrasound"; "chest X-ray"; "contrast-enhanced brain CT"; "contrast-enhanced brain MRI".
+Procedures: "bronchoscopy"; "EBUS-TBNA"; "EUS-FNA"; "endobronchial ultrasound-guided transbronchial needle aspiration"; "endoscopic ultrasound"; "biopsy"; "image-guided biopsy"; "flexible bronchoscopy"; "surgical mediastinal staging".
+Finding_of_lung: "centrally placed nodules or masses"; "peripheral lung lesions"; "enlarged intrathoracic nodes"; "intrathoracic lymph nodes"; "isolated distant metastases"; "synchronous tumours".
+Genetic_disease: "EGFR-TK mutation".
+Managements: "surveillance"; "suspected cancer pathway referral"; "rapid access to PET-CT scanning"; "multidisciplinary team meeting"; "fast-track lung cancer clinics".
+Treatments: "curative intent"; "treatment with curative intent"; "radical treatment"; "chemotherapy"; "radiotherapy"; "ablative treatment".
+Anatomical_structures: "liver"; "adrenals"; "lower neck"; "brain"; "bone"; "lymph nodes"; "chest".
+Information_about_patient: "40"; "inherited high risk"; "firstdegree relatives with pancreatic cancer"; "smoked"; "aged 40 and over".
+Understanding_of_diagnosis: "unclear diagnosis"; "no tissue diagnosis"; "negative EBUS-TBNA or EUS-FNA"; "clinical suspicion of nodal malignancy"; "clinical stage I NSCLC"; "clinical stage II NSCLC"; "clinical stage III NSCLC"; "clinical features suggestive of intracranial pathology".
+

@@ -1,0 +1,329 @@
+
+---------------Iteration 1----------------
+
+Patient 1:
+age(63).
+have("abdominal_pain").
+have("diabetes").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")).
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have("MMR_wild_type").
+
+Patient 2:
+age(63).
+have("indigestion").
+have("back_pain").
+have("weight_loss").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have("liver_metastases").
+
+Patient 3:
+age(78).
+have("abdominal_pain").
+have("weight_loss").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have("liver_metastases").
+have("pancreatic_cysts").
+
+Patient 4:
+age(82).
+have("abdominal_pain").
+have("jaundice").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+
+Patient 5:
+age(84).
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have("lung_metastases").
+
+Patient 6:
+age(48).
+have("abdominal_pain").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+
+Patient 7:
+age(58).
+have("abdominal_pain").
+have("jaundice").
+have("weight_loss").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+
+Patient 8:
+age(56).
+have("dark_urine").
+have("suspected_UTI").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+
+Patient 9:
+age(60).
+have("abdominal_pain").
+have("nausea").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+
+Patient 10:
+age(62).
+have("abdominal_pain").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+
+Patient 11:
+age(54).
+have("abdominal_pain").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have("liver_metastases").
+
+Patient 12:
+age(74).
+have("shortness_of_breath").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+
+Patient 13:
+age(41).
+have("abdominal_pain").
+have("weight_loss").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+
+Patient 14:
+age(79).
+have("weight_loss").
+have("new-onset_diabetes").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+
+Patient 15:
+age(76).
+have("weight_loss").
+have("new-onset_diabetes").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have("biliary_obstruction").
+
+Patient 16:
+age(77).
+have("obstructive_jaundice").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have("biliary_obstruction").
+
+Patient 17:
+age(59).
+have("pancreatic_cysts").
+have("enhancing_solid_component_in_the_cyst").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+
+Patient 18:
+age(57).
+have("abdominal_pain").
+have("weight_loss").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+
+Patient 19:
+age(68).
+have("abdominal_pain").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have("liver_metastases").
+have("kidney_stones").
+
+Patient 20:
+age(67).
+have("multiple_transient_ischemic_attacks").
+have("pancreatic_abnormalities").
+have("cancer("pancreas")").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have("pancreatic_cysts").
+
+
+
+---------------Iteration 2----------------
+
+Patient 1:
+age(63).
+have("abdominal_pain").
+have("diabetes").
+have("pancreatic_abnormalities").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 2:
+age(63).
+have("back_pain").
+have("weight_loss").
+have("pancreatic_abnormalities").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+suspected("liver_metastases").
+have(cancer("pancreas")).
+
+Patient 3:
+age(78).
+have("abdominal_pain").
+have("weight_loss").
+have("pancreatic_abnormalities").
+have("pancreatic_cysts").
+have("cystic_lesions").
+located_in("cystic_lesions", "head_of_the_pancreas").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 4:
+age(82).
+have("abdominal_pain").
+have("jaundice").
+have("pancreatic_abnormalities").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 5:
+age(84).
+have("pancreatic_abnormalities").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 6:
+age(48).
+have("abdominal_pain").
+have("pancreatic_abnormalities").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 7:
+age(58).
+have("abdominal_pain").
+have("jaundice").
+have("weight_loss").
+have("pancreatic_abnormalities").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 8:
+age(56).
+have("pancreatic_abnormalities").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 9:
+age(60).
+have("abdominal_pain").
+have("nausea").
+have("pancreatic_abnormalities").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 10:
+age(62).
+have("abdominal_pain").
+have("pancreatic_abnormalities").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 11:
+age(54).
+have("abdominal_pain").
+have("pancreatic_abnormalities").
+suspected("liver_metastases").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 12:
+age(74).
+have("pancreatic_abnormalities").
+have(cancer("pancreas")).
+
+Patient 13:
+age(41).
+have("abdominal_pain").
+have("weight_loss").
+have("pancreatic_abnormalities").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 14:
+age(79).
+have("weight_loss").
+have("new-onset_diabetes").
+have("pancreatic_abnormalities").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 15:
+age(76).
+have("weight_loss").
+have("new-onset_diabetes").
+have("biliary_obstruction").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 16:
+age(77).
+have("obstructive_jaundice").
+used_for("ERCP", "biliary_obstruction").
+findings("no_tissue_diagnosis").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 17:
+age(59).
+have("pancreatic_cysts").
+have("enhancing_solid_component_in_the_cyst").
+need("more_information").
+need("likelihood_of_malignancy").
+have(cancer("pancreas")).
+
+Patient 18:
+age(57).
+have("weight_loss").
+have("abdominal_pain").
+have("pancreatic_abnormalities").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 19:
+age(68).
+have("abdominal_pain").
+have("pancreatic_abnormalities").
+suspected("liver_metastases").
+need("clinical_management").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+
+Patient 20:
+age(67).
+have("pancreatic_abnormalities").
+have("pancreatic_cysts").
+have("cystic_lesions").
+located_in("cystic_lesions", "head_of_the_pancreas").
+findings_from_procedure("pancreatic_protocol_CT_scan", "unclear_diagnosis").
+have(cancer("pancreas")).
+

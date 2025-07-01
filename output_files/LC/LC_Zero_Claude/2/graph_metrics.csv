@@ -1,0 +1,2 @@
+experiment_name,experiment_number,experiment,model,iterations_constants,iterations_predicates,iterations_rulegen2,temperature,redo_coverage,file_name,wl_similarity,emd_adjusted_similarity,emd_base_similarity,emd_size_penalty,adjacency_adjusted_similarity,adjacency_base_similarity,adjacency_structure_penalty,accuracy,timestamp
+output_files/29,2,lung_cancer_guidelines,claude-3-7-sonnet-20250219,0,0,0,0.0001,unknown,zero_shot_response,0.18602,0.58515,0.72483,0.19271,0.38947,0.51302,0.24082,0.26042,2025-04-09 12:59:01

@@ -1,0 +1,402 @@
+=== Patient 1 ===
+clingo version 5.4.1
+Reading from /tmp/tmp_s1x0bvl.lp
+Solving...
+Answer: 1
+have("abdominal_pain") have("diabetes") have("new_onset_diabetes") have("pancreatic_abnormalities") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(63) offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 2
+have("abdominal_pain") have("diabetes") have("new_onset_diabetes") have("pancreatic_abnormalities") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(63) offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 3
+have("abdominal_pain") have("diabetes") have("new_onset_diabetes") have("pancreatic_abnormalities") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(63) offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
+
+==================================================
+
+=== Patient 2 ===
+clingo version 5.4.1
+Reading from /tmp/tmpt9wj9aj1.lp
+Solving...
+Answer: 1
+have("back_pain") have("indigestion") have("pancreatic_abnormalities") have("unexplained_weight_loss") have(cancer("pancreas")) suspected("liver_metastases") offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") need("more_information") ask("family_history") consider("ultrasound") consider("CT_scan") consider("MRI/MRCP") age(63) assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 2
+have("back_pain") have("indigestion") have("pancreatic_abnormalities") have("unexplained_weight_loss") have(cancer("pancreas")) suspected("liver_metastases") offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") need("more_information") ask("family_history") consider("ultrasound") consider("CT_scan") consider("MRI/MRCP") age(63) assess("additional_symptoms") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 3
+have("back_pain") have("indigestion") have("pancreatic_abnormalities") have("unexplained_weight_loss") have(cancer("pancreas")) suspected("liver_metastases") offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") need("more_information") ask("family_history") consider("ultrasound") consider("CT_scan") consider("MRI/MRCP") age(63) assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 4
+have("back_pain") have("indigestion") have("pancreatic_abnormalities") have("unexplained_weight_loss") have(cancer("pancreas")) suspected("liver_metastases") offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") need("more_information") ask("family_history") consider("ultrasound") consider("CT_scan") consider("MRI/MRCP") age(63) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 5
+have("back_pain") have("indigestion") have("pancreatic_abnormalities") have("unexplained_weight_loss") have(cancer("pancreas")) suspected("liver_metastases") offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") need("more_information") ask("family_history") consider("ultrasound") consider("CT_scan") consider("MRI/MRCP") age(63) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 6
+have("back_pain") have("indigestion") have("pancreatic_abnormalities") have("unexplained_weight_loss") have(cancer("pancreas")) suspected("liver_metastases") offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") need("more_information") ask("family_history") consider("ultrasound") consider("CT_scan") consider("MRI/MRCP") age(63) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 6
+Calls        : 1
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
+
+==================================================
+
+=== Patient 3 ===
+clingo version 5.4.1
+Reading from /tmp/tmp61932m5c.lp
+Solving...
+Answer: 1
+have("abdominal_pain") have("liver_metastases") have("pancreatic_abnormalities") have("pancreatic_cysts") have("unexplained_weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") findings("cystic_lesions","head_of_pancreas") ask("family_history") consider("ultrasound") consider("CT_scan") age(78) assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 2
+have("abdominal_pain") have("liver_metastases") have("pancreatic_abnormalities") have("pancreatic_cysts") have("unexplained_weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") findings("cystic_lesions","head_of_pancreas") ask("family_history") consider("ultrasound") consider("CT_scan") age(78) assess("additional_symptoms") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 3
+have("abdominal_pain") have("liver_metastases") have("pancreatic_abnormalities") have("pancreatic_cysts") have("unexplained_weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") findings("cystic_lesions","head_of_pancreas") ask("family_history") consider("ultrasound") consider("CT_scan") age(78) assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 4
+have("abdominal_pain") have("liver_metastases") have("pancreatic_abnormalities") have("pancreatic_cysts") have("unexplained_weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") findings("cystic_lesions","head_of_pancreas") ask("family_history") consider("ultrasound") consider("CT_scan") age(78) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 5
+have("abdominal_pain") have("liver_metastases") have("pancreatic_abnormalities") have("pancreatic_cysts") have("unexplained_weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") findings("cystic_lesions","head_of_pancreas") ask("family_history") consider("ultrasound") consider("CT_scan") age(78) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 6
+have("abdominal_pain") have("liver_metastases") have("pancreatic_abnormalities") have("pancreatic_cysts") have("unexplained_weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") findings("cystic_lesions","head_of_pancreas") ask("family_history") consider("ultrasound") consider("CT_scan") age(78) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 6
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 4 ===
+clingo version 5.4.1
+Reading from /tmp/tmpz92e7t0x.lp
+Solving...
+Answer: 1
+have("abdominal_pain") have("jaundice") have("pancreatic_abnormalities") have(cancer("pancreas")) findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") offer("pancreatic_protocol_ct","pelvis") offer("pancreatic_protocol_ct","abdomen") offer("pancreatic_protocol_ct","chest") ask("family_history") age(82) refer("suspected_cancer_pathway",cancer("pancreas"))
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 5 ===
+clingo version 5.4.1
+Reading from /tmp/tmptfj5a2nl.lp
+Solving...
+Answer: 1
+have("lung_metastases") have("pancreatic_abnormalities") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offer("EUS_with_tissue") offered("EUS_with_tissue") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") need("cytological_samples") need("histological_samples") ask("family_history") age(84)
+Answer: 2
+have("lung_metastases") have("pancreatic_abnormalities") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offer("EUS_with_tissue") offered("EUS_with_tissue") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") need("cytological_samples") need("histological_samples") ask("family_history") age(84) offered("FDG-PET/CT") offer("FDG-PET/CT")
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 6 ===
+clingo version 5.4.1
+Reading from /tmp/tmptmpknv6q.lp
+Solving...
+Answer: 1
+have("abdominal_pain") have("pancreatic_abnormalities") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(48) offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 2
+have("abdominal_pain") have("pancreatic_abnormalities") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(48) offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 3
+have("abdominal_pain") have("pancreatic_abnormalities") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(48) offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 7 ===
+clingo version 5.4.1
+Reading from /tmp/tmpwhqz18db.lp
+Solving...
+Answer: 1
+have("abdominal_pain") have("jaundice") have("pancreatic_abnormalities") have("unexplained_weight_loss") have(cancer("pancreas")) findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") offer("pancreatic_protocol_ct","pelvis") offer("pancreatic_protocol_ct","abdomen") offer("pancreatic_protocol_ct","chest") need("cytological_samples") need("histological_samples") ask("family_history") age(58) refer("suspected_cancer_pathway",cancer("pancreas")) assess("additional_symptoms")
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 8 ===
+clingo version 5.4.1
+Reading from /tmp/tmps7hn07d7.lp
+Solving...
+Answer: 1
+have("dark_urine") have("pancreatic_abnormalities") have("suspected_UTI") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(56) offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 2
+have("dark_urine") have("pancreatic_abnormalities") have("suspected_UTI") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(56) offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 3
+have("dark_urine") have("pancreatic_abnormalities") have("suspected_UTI") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(56) offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 9 ===
+clingo version 5.4.1
+Reading from /tmp/tmppvyl01tm.lp
+Solving...
+Answer: 1
+have("abdominal_pain") have("nausea") have("pancreatic_abnormalities") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(60) offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 2
+have("abdominal_pain") have("nausea") have("pancreatic_abnormalities") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(60) offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 3
+have("abdominal_pain") have("nausea") have("pancreatic_abnormalities") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(60) offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 10 ===
+clingo version 5.4.1
+Reading from /tmp/tmpelxql0lx.lp
+Solving...
+Answer: 1
+have("abdominal_pain") have("pancreatic_abnormalities") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(62) offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 2
+have("abdominal_pain") have("pancreatic_abnormalities") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(62) offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 3
+have("abdominal_pain") have("pancreatic_abnormalities") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(62) offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 11 ===
+clingo version 5.4.1
+Reading from /tmp/tmpuvipi2t4.lp
+Solving...
+Answer: 1
+have("abdominal_pain") have("liver_metastases") have("pancreatic_abnormalities") have(cancer("pancreas")) suspected("liver_metastases") offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") need("more_information") ask("family_history") consider("MRI/MRCP") age(54) offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 2
+have("abdominal_pain") have("liver_metastases") have("pancreatic_abnormalities") have(cancer("pancreas")) suspected("liver_metastases") offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") need("more_information") ask("family_history") consider("MRI/MRCP") age(54) offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 3
+have("abdominal_pain") have("liver_metastases") have("pancreatic_abnormalities") have(cancer("pancreas")) suspected("liver_metastases") offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") need("more_information") ask("family_history") consider("MRI/MRCP") age(54) offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 12 ===
+clingo version 5.4.1
+Reading from /tmp/tmppkabf4tw.lp
+Solving...
+Answer: 1
+have("pancreatic_abnormalities") have("shortness_of_breath") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(74) offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 2
+have("pancreatic_abnormalities") have("shortness_of_breath") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(74) offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 3
+have("pancreatic_abnormalities") have("shortness_of_breath") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(74) offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 13 ===
+clingo version 5.4.1
+Reading from /tmp/tmp38w_3gmo.lp
+Solving...
+Answer: 1
+have("abdominal_pain") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(41) assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 2
+have("abdominal_pain") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(41) assess("additional_symptoms") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 3
+have("abdominal_pain") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(41) assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 4
+have("abdominal_pain") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(41) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 5
+have("abdominal_pain") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(41) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 6
+have("abdominal_pain") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(41) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 6
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 14 ===
+clingo version 5.4.1
+Reading from /tmp/tmpmz9t9do2.lp
+Solving...
+Answer: 1
+have("new_onset_diabetes") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") consider("ultrasound") consider("CT_scan") age(79) assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 2
+have("new_onset_diabetes") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") consider("ultrasound") consider("CT_scan") age(79) assess("additional_symptoms") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 3
+have("new_onset_diabetes") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") consider("ultrasound") consider("CT_scan") age(79) assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 4
+have("new_onset_diabetes") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") consider("ultrasound") consider("CT_scan") age(79) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 5
+have("new_onset_diabetes") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") consider("ultrasound") consider("CT_scan") age(79) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 6
+have("new_onset_diabetes") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") consider("ultrasound") consider("CT_scan") age(79) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 6
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 15 ===
+clingo version 5.4.1
+Reading from /tmp/tmp5xdsflxq.lp
+Solving...
+Answer: 1
+have("biliary_obstruction") have("new_onset_diabetes") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") consider("ultrasound") consider("CT_scan") age(76) assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 2
+have("biliary_obstruction") have("new_onset_diabetes") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") consider("ultrasound") consider("CT_scan") age(76) assess("additional_symptoms") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 3
+have("biliary_obstruction") have("new_onset_diabetes") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") consider("ultrasound") consider("CT_scan") age(76) assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 4
+have("biliary_obstruction") have("new_onset_diabetes") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") consider("ultrasound") consider("CT_scan") age(76) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 5
+have("biliary_obstruction") have("new_onset_diabetes") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") consider("ultrasound") consider("CT_scan") age(76) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 6
+have("biliary_obstruction") have("new_onset_diabetes") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") consider("ultrasound") consider("CT_scan") age(76) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 6
+Calls        : 1
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
+
+==================================================
+
+=== Patient 16 ===
+clingo version 5.4.1
+Reading from /tmp/tmpsrgnuf87.lp
+Solving...
+Answer: 1
+have("biliary_obstruction") have("obstructive_jaundice") have(cancer("pancreas")) suspected(cancer("pancreas")) offer("pancreatic_protocol_ct") offer("draining_bile_duct") offered("pancreatic_protocol_ct") offered("draining_bile_duct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") findings_from_procedure("EUS_with_tissue","no_tissue_diagnosis") need("tissue_diagnosis") ask("family_history") age(77) offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 2
+have("biliary_obstruction") have("obstructive_jaundice") have(cancer("pancreas")) suspected(cancer("pancreas")) offer("pancreatic_protocol_ct") offer("draining_bile_duct") offered("pancreatic_protocol_ct") offered("draining_bile_duct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") findings_from_procedure("EUS_with_tissue","no_tissue_diagnosis") need("tissue_diagnosis") ask("family_history") age(77) offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 3
+have("biliary_obstruction") have("obstructive_jaundice") have(cancer("pancreas")) suspected(cancer("pancreas")) offer("pancreatic_protocol_ct") offer("draining_bile_duct") offered("pancreatic_protocol_ct") offered("draining_bile_duct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") findings_from_procedure("EUS_with_tissue","no_tissue_diagnosis") need("tissue_diagnosis") ask("family_history") age(77) offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 17 ===
+clingo version 5.4.1
+Reading from /tmp/tmp5ev78rr6.lp
+Solving...
+Answer: 1
+have("pancreatic_cysts") have(cancer("pancreas")) have("pancreatic_abnormalities") offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_CT_scan","unclear_diagnosis") need("maligancy_likelihood") findings("solid_component","pancreatic_cyst") refer("resection") ask("family_history") age(59)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 18 ===
+clingo version 5.4.1
+Reading from /tmp/tmpxuvffimp.lp
+Solving...
+Answer: 1
+have("abdominal_pain") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(57) assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 2
+have("abdominal_pain") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(57) assess("additional_symptoms") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 3
+have("abdominal_pain") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(57) assess("additional_symptoms") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue") refer("suspected_cancer_pathway",cancer("pancreas"))
+Answer: 4
+have("abdominal_pain") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(57) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 5
+have("abdominal_pain") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(57) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 6
+have("abdominal_pain") have("pancreatic_abnormalities") have("unexplained_weight_loss") have("weight_loss") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") ask("family_history") age(57) assess("additional_symptoms") offered("urgent_investigation") offer("urgent_investigation") offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 6
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 19 ===
+clingo version 5.4.1
+Reading from /tmp/tmpunghzg20.lp
+Solving...
+Answer: 1
+have("abdominal_pain") have("kidney_stones") have("liver_metastases") have("pancreatic_abnormalities") have(cancer("pancreas")) suspected("liver_metastases") offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") need("more_information") ask("family_history") consider("MRI/MRCP") age(68) offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 2
+have("abdominal_pain") have("kidney_stones") have("liver_metastases") have("pancreatic_abnormalities") have(cancer("pancreas")) suspected("liver_metastases") offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") need("more_information") ask("family_history") consider("MRI/MRCP") age(68) offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 3
+have("abdominal_pain") have("kidney_stones") have("liver_metastases") have("pancreatic_abnormalities") have(cancer("pancreas")) suspected("liver_metastases") offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") need("more_information") ask("family_history") consider("MRI/MRCP") age(68) offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+
+=== Patient 20 ===
+clingo version 5.4.1
+Reading from /tmp/tmp9qau65st.lp
+Solving...
+Answer: 1
+have("multiple_TIA") have("pancreatic_abnormalities") have("pancreatic_cysts") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") findings("cystic_lesions","head_of_pancreas") ask("family_history") age(67) offered("EUS_with_tissue") offer("EUS_with_tissue")
+Answer: 2
+have("multiple_TIA") have("pancreatic_abnormalities") have("pancreatic_cysts") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") findings("cystic_lesions","head_of_pancreas") ask("family_history") age(67) offered("FDG-PET/CT") offer("FDG-PET/CT")
+Answer: 3
+have("multiple_TIA") have("pancreatic_abnormalities") have("pancreatic_cysts") have(cancer("pancreas")) offer("pancreatic_protocol_ct") offered("pancreatic_protocol_ct") findings_from_procedure("pancreatic_protocol_ct","unclear_diagnosis") findings("cystic_lesions","head_of_pancreas") ask("family_history") age(67) offered("FDG-PET/CT") offer("FDG-PET/CT") offered("EUS_with_tissue") offer("EUS_with_tissue")
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
+
+==================================================
+

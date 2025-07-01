@@ -81,7 +81,7 @@ first_degree_relative(D, PersonID)
 
 % The ASP rules for these statements are:
 offer("surveillance", cancer("pancreas")) :- have("inherited_high_risk"), have("hereditary_pancreatitis"), have("PRSS1").
-offer("surveillance", cancer("pancreas")) :- have("inherited_high_risk"), 1{have("BRCA1"); have("BRCA2"); have("PALB2"); have("CDKN2A")}4, first_degree_relative(cancer("pancreas"),_).
+offer("surveillance", cancer("pancreas")) :- have("inherited_high_risk"), 1{{have("BRCA1"); have("BRCA2"); have("PALB2"); have("CDKN2A")}}4, first_degree_relative(cancer("pancreas"),_).
 
 % These rules read as: 
 % offer surveillance for pancreatic cancer to people with hereditary pancreatitis and a PRSS1 mutation and the patient has inherited high risk.

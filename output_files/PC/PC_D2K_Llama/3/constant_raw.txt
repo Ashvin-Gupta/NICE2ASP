@@ -1,0 +1,102 @@
+
+
+---------------Iteration 1----------------
+
+Constants: 
+Disease: "pancreatic cancer"; 
+Symptoms: "obstructive jaundice"; "jaundice"; "unexplained weight loss"; "unexplained appetite loss"; "diarrhoea"; "back pain"; "abdominal pain"; "nausea"; "voting"; "constipation"; "new-onset diabetes"; 
+Imaging: "pancreatic protocol CT"; "FDG-PET/CT"; "MRI/MRCP"; "CT scan"; "ultrasound scan"; 
+Procedures: "EUS"; "EUS with EUS-guided tissue sampling"; "EUS with fine-needle aspiration"; "ERCP"; "biliary brushing for cytology"; "carcinoembryonic antigen (CEA) assay"; "laparoscopy with laparoscopic ultrasound"; 
+Finding_of_pancreas: "pancreatic abnormalities"; "pancreatic cysts"; "cystic lesions in the head of the pancreas"; "enhancing solid component in the cyst"; "main pancreatic duct that is 10 mm diameter or larger"; 
+Genetic_disease: "hereditary pancreatitis"; "PRSS1 mutation"; "BRCA1"; "BRCA2"; "PALB2"; "CDKN2A (p16)"; "Peutz–Jeghers syndrome"; "Lynch syndrome"; "mismatch repair gene (MLH1, MSH2, MSH6 or PMS2) mutations"; 
+Managements: "surveillance"; "suspected cancer pathway referral"; 
+Treatments: "surgery"; "radiotherapy"; "systemic therapy"; 
+Anatomical_structures: "bile duct"; "liver"; "abdomen"; "pelvis"; "chest"; 
+Information_about_patient: "18"; "40"; "60"; "first-degree relatives with pancreatic cancer"; "inherited high risk"; 
+Understanding_of_diagnosis: "unclear diagnosis"; "no tissue diagnosis"; "suspected pancreatic cancer"; "newly diagnosed pancreatic cancer"; "localised disease"; "unexplained symptoms"; "additional symptoms, signs or findings"
+
+
+
+---------------Iteration 1----------------
+
+Constants: 
+Disease: "pancreatic cancer"; 
+Symptoms: "obstructive jaundice"; "jaundice"; "unexplained weight loss"; "unexplained appetite loss"; "diarrhoea"; "back pain"; "abdominal pain"; "nausea"; "voting"; "constipation"; "new-onset diabetes"; 
+Imaging: "pancreatic protocol CT"; "MRI/MRCP"; "CT scan"; "ultrasound scan"; "FDG-PET/CT"; 
+Procedures: "EUS"; "EUS with EUS-guided tissue sampling"; "ERCP"; "biliary brushing for cytology"; "fine-needle aspiration"; "carcinoembryonic antigen (CEA) assay"; "laparoscopy with laparoscopic ultrasound"; 
+Finding_of_pancreas: "pancreatic abnormalities"; "pancreatic cysts"; "cystic lesions in the head of the pancreas"; "enhancing solid component in the cyst"; "main pancreatic duct that is 10 mm diameter or larger"; 
+Genetic_disease: "hereditary pancreatitis"; "PRSS1 mutation"; "BRCA1"; "BRCA2"; "PALB2"; "CDKN2A (p16)"; "Peutz–Jeghers syndrome"; "Lynch syndrome"; "mismatch repair gene (MLH1, MSH2, MSH6 or PMS2) mutations"; 
+Managements: "surveillance"; "suspected cancer pathway referral"; 
+Treatments: "surgery"; "radiotherapy"; "systemic therapy"; 
+Anatomical_structures: "bile duct"; "liver"; "abdomen"; "pelvis"; "chest"; 
+Information_about_patient: "18"; "40"; "60"; "first-degree relatives with pancreatic cancer"; "inherited high risk"; 
+Understanding_of_diagnosis: "unclear diagnosis"; "no tissue diagnosis"; "suspected pancreatic cancer"; "newly diagnosed pancreatic cancer"; "localised disease"; "unexplained"
+
+
+
+---------------Iteration 2----------------
+
+Constants: 
+Disease: "pancreatic cancer"; 
+Symptoms: "obstructive jaundice"; "jaundice"; "unexplained weight loss"; "unexplained appetite loss"; "diarrhoea"; "back pain"; "abdominal pain"; "nausea"; "voting"; "constipation"; "new-onset diabetes"; 
+Imaging: "pancreatic protocol CT"; "MRI/MRCP"; "CT scan"; "ultrasound scan"; "FDG-PET/CT"; 
+Procedures: "EUS"; "EUS with EUS-guided tissue sampling"; "ERCP"; "biliary brushing for cytology"; "fine-needle aspiration"; "carcinoembryonic antigen (CEA) assay"; "laparoscopy with laparoscopic ultrasound"; 
+Finding_of_pancreas: "pancreatic abnormalities"; "pancreatic cysts"; "cystic lesions in the head of the pancreas"; "enhancing solid component in the cyst"; "main pancreatic duct that is 10 mm diameter or larger"; 
+Genetic_disease: "hereditary pancreatitis"; "PRSS1 mutation"; "BRCA1"; "BRCA2"; "PALB2"; "CDKN2A (p16)"; "Peutz–Jeghers syndrome"; "Lynch syndrome"; "mismatch repair gene (MLH1, MSH2, MSH6 or PMS2) mutations"; 
+Managements: "surveillance"; "suspected cancer pathway referral"; 
+Treatments: "surgery"; "radiotherapy"; "systemic therapy"; 
+Anatomical_structures: "bile duct"; "liver"; "abdomen"; "pelvis"; "chest"; 
+Information_about_patient: "18"; "40"; "60"; "first-degree relatives with pancreatic cancer"; "inherited high risk"; 
+Understanding_of_diagnosis: "unclear diagnosis"; "no tissue diagnosis"; "suspected pancreatic cancer"; "newly diagnosed pancreatic cancer"; "localised disease"; "unexplained"
+
+
+
+---------------Iteration 3----------------
+
+Constants: 
+Disease: "pancreatic cancer"; 
+Symptoms: "obstructive jaundice"; "jaundice"; "unexplained weight loss"; "unexplained appetite loss"; "diarrhoea"; "back pain"; "abdominal pain"; "nausea"; "voting"; "constipation"; "new-onset diabetes"; 
+Imaging: "pancreatic protocol CT"; "MRI/MRCP"; "CT scan"; "ultrasound scan"; "FDG-PET/CT"; 
+Procedures: "EUS"; "EUS with EUS-guided tissue sampling"; "ERCP"; "biliary brushing for cytology"; "fine-needle aspiration"; "carcinoembryonic antigen (CEA) assay"; "laparoscopy with laparoscopic ultrasound"; 
+Finding_of_pancreas: "pancreatic abnormalities"; "pancreatic cysts"; "cystic lesions in the head of the pancreas"; "enhancing solid component in the cyst"; "main pancreatic duct that is 10 mm diameter or larger"; 
+Genetic_disease: "hereditary pancreatitis"; "PRSS1 mutation"; "BRCA1"; "BRCA2"; "PALB2"; "CDKN2A (p16)"; "Peutz–Jeghers syndrome"; "Lynch syndrome"; "mismatch repair gene (MLH1, MSH2, MSH6 or PMS2) mutations"; 
+Managements: "surveillance"; "suspected cancer pathway referral"; 
+Treatments: "surgery"; "radiotherapy"; "systemic therapy"; 
+Anatomical_structures: "bile duct"; "liver"; "abdomen"; "pelvis"; "chest"; 
+Information_about_patient: "18"; "40"; "60"; "first-degree relatives with pancreatic cancer"; "inherited high risk"; 
+Understanding_of_diagnosis: "unclear diagnosis"; "no tissue diagnosis"; "suspected pancreatic cancer"; "newly diagnosed pancreatic cancer"; "localised disease"; "unexplained"
+
+
+
+---------------Iteration 4----------------
+
+Constants: 
+Disease: "pancreatic cancer"; 
+Symptoms: "obstructive jaundice"; "jaundice"; "unexplained weight loss"; "unexplained appetite loss"; "diarrhoea"; "back pain"; "abdominal pain"; "nausea"; "voting"; "constipation"; "new-onset diabetes"; 
+Imaging: "pancreatic protocol CT"; "MRI/MRCP"; "CT scan"; "ultrasound scan"; "FDG-PET/CT"; 
+Procedures: "EUS"; "EUS with EUS-guided tissue sampling"; "ERCP"; "biliary brushing for cytology"; "fine-needle aspiration"; "carcinoembryonic antigen (CEA) assay"; "laparoscopy with laparoscopic ultrasound"; 
+Finding_of_pancreas: "pancreatic abnormalities"; "pancreatic cysts"; "cystic lesions in the head of the pancreas"; "enhancing solid component in the cyst"; "main pancreatic duct that is 10 mm diameter or larger"; 
+Genetic_disease: "hereditary pancreatitis"; "PRSS1 mutation"; "BRCA1"; "BRCA2"; "PALB2"; "CDKN2A (p16)"; "Peutz–Jeghers syndrome"; "Lynch syndrome"; "mismatch repair gene (MLH1, MSH2, MSH6 or PMS2) mutations"; 
+Managements: "surveillance"; "suspected cancer pathway referral"; 
+Treatments: "surgery"; "radiotherapy"; "systemic therapy"; 
+Anatomical_structures: "bile duct"; "liver"; "abdomen"; "pelvis"; "chest"; 
+Information_about_patient: "18"; "40"; "60"; "first-degree relatives with pancreatic cancer"; "inherited high risk"; 
+Understanding_of_diagnosis: "unclear diagnosis"; "no tissue diagnosis"; "suspected pancreatic cancer"; "newly diagnosed pancreatic cancer"; "localised disease"; "unexplained"
+
+
+
+---------------Iteration 5----------------
+
+Constants: 
+Disease: "pancreatic cancer"; 
+Symptoms: "obstructive jaundice"; "jaundice"; "unexplained weight loss"; "unexplained appetite loss"; "diarrhoea"; "back pain"; "abdominal pain"; "nausea"; "voting"; "constipation"; "new-onset diabetes"; 
+Imaging: "pancreatic protocol CT"; "MRI/MRCP"; "CT scan"; "ultrasound scan"; "FDG-PET/CT"; 
+Procedures: "EUS"; "EUS with EUS-guided tissue sampling"; "ERCP"; "biliary brushing for cytology"; "fine-needle aspiration"; "carcinoembryonic antigen (CEA) assay"; "laparoscopy with laparoscopic ultrasound"; 
+Finding_of_pancreas: "pancreatic abnormalities"; "pancreatic cysts"; "cystic lesions in the head of the pancreas"; "enhancing solid component in the cyst"; "main pancreatic duct that is 10 mm diameter or larger"; 
+Genetic_disease: "hereditary pancreatitis"; "PRSS1 mutation"; "BRCA1"; "BRCA2"; "PALB2"; "CDKN2A (p16)"; "Peutz–Jeghers syndrome"; "Lynch syndrome"; "mismatch repair gene (MLH1, MSH2, MSH6 or PMS2) mutations"; 
+Managements: "surveillance"; "suspected cancer pathway referral"; 
+Treatments: "surgery"; "radiotherapy"; "systemic therapy"; 
+Anatomical_structures: "bile duct"; "liver"; "abdomen"; "pelvis"; "chest"; 
+Information_about_patient: "18"; "40"; "60"; "first-degree relatives with pancreatic cancer"; "inherited high risk"; 
+Understanding_of_diagnosis: "unclear diagnosis"; "no tissue diagnosis"; "suspected pancreatic cancer"; "newly diagnosed pancreatic cancer"; "localised disease"; "unexplained"
+

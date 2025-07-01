@@ -1,0 +1,12 @@
+Constants:
+Anatomical_structures: "abdomen"; "bile duct"; "chest"; "liver"; "pancreas"; "pelvis".
+Disease: "bladder cancer"; "colorectal cancer"; "gastro-oesophageal cancer"; "lung cancer"; "oesophageal cancer"; "pancreatic cancer"; "prostate cancer"; "renal cancer"; "stomach cancer"; "urological cancer".
+Finding_of_pancreas: "cystic lesions in the head of the pancreas"; "enhancing solid component in the cyst"; "main pancreatic duct that is 10 mm diameter or larger"; "pancreatic abnormalities"; "pancreatic cysts".
+Genetic_disease: "BRCA1 mutation"; "BRCA2 mutation"; "CDKN2A (p16) mutation"; "Lynch syndrome"; "PALB2 mutation"; "PRSS1 mutation"; "Peutz–Jeghers syndrome"; "hereditary pancreatitis"; "mismatch repair gene (MLH1, MSH2, MSH6 or PMS2) mutations".
+Imaging: "CT scan"; "FDG-PET/CT"; "MRI/MRCP"; "laparoscopic ultrasound"; "pancreatic protocol CT"; "ultrasound scan".
+Information_about_patient: "18"; "40"; "60"; "first-degree relatives with pancreatic cancer"; "inherited high risk"; "two or more first-degree relatives with pancreatic cancer, across two or more generations".
+Managements: "surveillance"; "suspected cancer pathway referral"; "urgent investigation".
+Procedures: "ERCP"; "EUS"; "EUS with fine-needle aspiration"; "EUS with tissue sampling"; "biliary brushing"; "carcinoembryonic antigen (CEA) assay"; "laparoscopy".
+Symptoms: "abdominal pain"; "back pain"; "constipation"; "diarrhoea"; "jaundice"; "nausea"; "new-onset diabetes"; "obstructive jaundice"; "unexplained appetite loss"; "unexplained weight loss"; "vomiting".
+Treatments: "radiotherapy"; "surgery"; "systemic therapy".
+Understanding_of_diagnosis: "localised disease"; "newly diagnosed pancreatic cancer"; "no tissue diagnosis"; "small-volume peritoneal and/or liver metastases"; "suspected liver metastases"; "unclear diagnosis".

@@ -1,0 +1,24 @@
+experiment:
+  name: "lung_cancer_guidelines"
+  version: "3"
+  output_dir: "output_files/29"
+
+input_files:
+  problem_text: "test_input_files/lung_cancer_guidelines.txt"
+  constant_prompt: "test_input_files/constant_prompt.txt"
+  predicate_prompt: "test_input_files/predicate_prompt.txt"
+  rule_generation_prompt: "test_input_files/rule_generation_2_prompt.txt"
+  verify_rules_prompt: "test_input_files/check_outputs.txt"
+  ground_truth: "test_input_files/ground_truth_lc.lp"
+  zero_shot: "input_files/zero_shot.txt"
+  in_context_prompt: "input_files/in_context_prompt.txt"
+  
+llm_params:
+  constant_inference_iterations: 0
+  predicate_inference_iterations: 0
+  rule_generation_iterations: 0
+  verify_rules_iterations: 0
+  model: "claude-3-7-sonnet-20250219"
+  temperature: 0.0001
+
+

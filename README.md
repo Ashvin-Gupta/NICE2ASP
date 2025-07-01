@@ -99,14 +99,14 @@ All outputs are saved in a subdirectory under the specified `output_dir` and `ve
 
 - `constant_raw.txt` / `constant_processed.txt`: Raw and processed constants extracted by the LLM
 - `predicate_raw.txt` / `predicate_processed.txt`: Raw and processed predicates
-- `rulegen_raw.lp`: Generated ASP rules
+- `rulegen_raw.txt`: Generated ASP rules
 - `graph_metrics.csv`: Graph-based similarity metrics between generated and ground truth programs
 - `config.yaml`: Copy of the configuration used for the run
 
 #### Example: `graph_metrics.csv`
-| experiment_name | model | wl_similarity | emd_adjusted_similarity | accuracy | ... |
+| experiment_name | model | iterations constants | iterations predicates | iterations rulegen| temperature| wl_similarity | emd_similarity | adjacency similarity| nodal accuracy |
 |-----------------|-------|---------------|------------------------|----------|-----|
-| output_files/32 | claude-3-7-sonnet-20250219 | 0.27301 | 0.87609 | 0.84091 | ... |
+| output_files/32 | claude-3-7-sonnet-20250219 | 1 | 1 | 1 | 0.19408 | 0.79429 | 0.79234 | 0.66667 |
 
 #### Example: `rulegen_raw.lp`
 ```prolog

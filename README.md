@@ -72,7 +72,7 @@ NICE2ASP is a pipeline for extracting knowledge from clinical guidelines using l
        temperature: 0.25
      ```
 
-## 2. Running the Pipeline
+## 2. Running the Data 2 Knowledge Pipeline
 
 To execute the pipeline, run:
 
@@ -127,3 +127,42 @@ offer("pancreatic_protocol_CT_scan") :- have("obstructive_jaundice"), suspected(
 - **Reproducibility:** Ensure all input files and configuration are preserved for each experiment.
 - **Extensibility:** You can add new guidelines, prompts, or models by updating the input files and configuration.
 
+# Running K2P (Knowledge-to-Patient Evaluation)
+
+K2P is a post-processing and evaluation pipeline that uses the generated ASP rules and patient descriptions to simulate and compare outputs using [clingo](https://potassco.org/clingo/).
+
+### Prerequisites
+
+- Ensure `clingo` is installed and available in your system path.
+
+### How to Run
+
+From the project root, execute:
+
+```bash
+python K2P.py
+```
+
+This script will:
+- Use the LLM to extract atoms from both ground truth and generated rules for each patient description.
+- Consolidate patient data across iterations.
+- Run clingo to simulate the ASP programs for each patient.
+- Filter and compare the results, saving outputs in `output_files/K2P/PC/`.
+
+### Input Files
+
+- `input_files/K2P/setupProgram.txt`: Prompt template for atom extraction.
+- `input_files/ground_truths/GT_PC.lp`: Ground truth ASP rules.
+- `output_files/PC/PC_D2K_Claude/1/rulegen_raw.lp`: Generated ASP rules (ensure this exists from a previous run of `main.py`).
+- `input_files/K2P/PC_descriptions.txt`: Patient descriptions.
+
+### Output Files
+
+- `output_files/K2P/PC/PC_descriptions_gt.txt`: Atoms extracted from ground truth.
+- `output_files/K2P/PC/PC_facts_gt.txt`: Consolidated patient facts (ground truth).
+- `output_files/K2P/PC/PC_descriptions_gen.txt`: Atoms extracted from generated rules.
+- `output_files/K2P/PC/PC_facts_gen.txt`: Consolidated patient facts (generated).
+- `output_files/K2P/PC/PC_gt_clingo_results.txt`: Clingo results for ground truth.
+- `output_files/K2P/PC/PC_gen_clingo_results.txt`: Clingo results for generated rules.
+- `output_files/K2P/PC/PC_filtered_clingo_results_gt.txt`: Filtered clingo results (ground truth).
+- `output_files/K2P/PC/PC_filtered_clingo_results_gen.txt`: Filtered clingo results (generated).

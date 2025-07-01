@@ -1,2 +1,0 @@
-experiment_name,experiment_number,experiment,model,iterations_constants,iterations_predicates,iterations_rulegen2,temperature,redo_coverage,file_name,wl_similarity,emd_adjusted_similarity,emd_base_similarity,emd_size_penalty,adjacency_adjusted_similarity,adjacency_base_similarity,adjacency_structure_penalty,accuracy,timestamp
-output_files/24,1,pancreatic_cancer_guidelines,llama-3.3-70b-versatile,0,0,0,0.0001,unknown,zero_shot_response,0.22238,0.70732,0.84685,0.16477,0.71422,0.87303,0.1819,0.71591,2025-04-09 10:29:05

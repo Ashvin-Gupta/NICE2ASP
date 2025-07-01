@@ -66,6 +66,17 @@ class LLMInferencer:
         processed_predicates = self._load_file(processed_predicates)
         prompt = prompt_template.format(problem_text=problem_text, constants=processed_constants, predicates=processed_predicates)
         self._callAPI(prompt, output_file, iterations)
+    
+    def extract_atoms(self, prompt_template:str, rules:str, descriptions:str, output_file:str, iterations:int) -> None:
+        # Run the prompt and verify whether the constants/predicates are within the text
+        
+      
+        prompt_template = self._load_file(prompt_template)
+        rules = self._load_file(rules)
+        descriptions = self._load_file(descriptions)
+        prompt = prompt_template.format(rules=rules, descriptions=descriptions)
+
+        self._callAPI(prompt, output_file, iterations)
 
 
 

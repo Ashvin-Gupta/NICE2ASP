@@ -108,7 +108,7 @@ All outputs are saved in a subdirectory under the specified `output_dir` and `ve
 |-----------------|-------|---------------------|---------------------|-------------------|-------------|---------------|----------------|---------------------|----------------|
 | output_files/32 | claude-3-7-sonnet-20250219 | 1 | 1 | 1 | 0.25 | 0.19408 | 0.79429 | 0.79234 | 0.66667 |
 
-#### Example: `rulegen_raw.lp`
+#### Example: `rulegen_raw.txt`
 ```prolog
 offer("pancreatic_protocol_CT_scan") :- have("obstructive_jaundice"), suspected(cancer("pancreas")), not offered("draining_the_bile_duct").
 ...

@@ -72,4 +72,5 @@ Cancer clinical nurse specialists
 • persistent or recurrent chest infection
 • finger clubbing
 • supraclavicular lymphadenopathy or persistent cervical lymphadenopathy
-• chest signs consistent with
+• chest signs consistent with lung cancer
+• thrombocytosis

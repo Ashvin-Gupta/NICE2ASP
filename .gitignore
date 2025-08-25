@@ -1,0 +1,4 @@
+# .gitignore file
+__pycache__/
+venv/
+results/master_results_old.csv

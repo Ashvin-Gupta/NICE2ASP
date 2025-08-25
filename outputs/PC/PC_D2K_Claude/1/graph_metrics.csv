@@ -1,3 +1,0 @@
-experiment_name,experiment_number,experiment,model,iterations_constants,iterations_predicates,iterations_rulegen2,temperature,redo_coverage,file_name,wl_similarity,emd_adjusted_similarity,emd_base_similarity,emd_size_penalty,adjacency_adjusted_similarity,adjacency_base_similarity,adjacency_structure_penalty,accuracy,timestamp
-output_files/32,1,pancreatic_cancer_guidelines,claude-3-7-sonnet-20250219,1,1,1,0.25,yes,final_rules,0.27301,0.87609,0.88617,0.01136,0.87554,0.90182,0.02914,0.84091,2025-04-09 12:17:41
-output_files/32,1,pancreatic_cancer_guidelines,claude-3-7-sonnet-20250219,1,1,1,0.25,no,rulegen2,0.25347,0.83422,0.88448,0.05682,0.86423,0.90996,0.05025,0.81818,2025-04-09 12:17:42

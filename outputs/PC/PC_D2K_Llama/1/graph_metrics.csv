@@ -1,3 +1,0 @@
-experiment_name,experiment_number,model,iterations_constants,iterations_predicates,iterations_rulegen2,temperature,redo_coverage,file_name,wl_similarity,emd_adjusted_similarity,emd_base_similarity,emd_size_penalty,adjacency_adjusted_similarity,adjacency_base_similarity,adjacency_structure_penalty,accuracy,timestamp
-output_files/1,1,llama-3.3-70b-versatile,1,1,1,0.0001,yes,final_rules,0.24885,0.75087,0.84714,0.11364,0.75185,0.86223,0.12802,0.76136,2025-03-28 13:44:19
-output_files/1,1,llama-3.3-70b-versatile,1,1,1,0.0001,no,rulegen2,0.28211,0.74157,0.8475,0.125,0.74339,0.86866,0.14422,0.76136,2025-03-28 13:44:21

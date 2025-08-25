@@ -127,7 +127,7 @@ offer("pancreatic_protocol_CT_scan") :- have("obstructive_jaundice"), suspected(
 - **Reproducibility:** Ensure all input files and configuration are preserved for each experiment.
 - **Extensibility:** You can add new guidelines, prompts, or models by updating the input files and configuration.
 
-# Running K2P (Knowledge-to-Patient Evaluation)
+# Running K2P (Knowledge-to-Performance Evaluation)
 
 K2P is a post-processing and evaluation pipeline that uses the generated ASP rules and patient descriptions to simulate and compare outputs using [clingo](https://potassco.org/clingo/).
 
